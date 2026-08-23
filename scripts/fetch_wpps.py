@@ -100,7 +100,7 @@ def fetch_and_store() -> dict:
     }
 
     if should_save:
-        fname = datetime.now(TW_TZ).strftime("%Y%m%d_%H%M%S") + f"_{change_type}.json"
+        fname = datetime.now(TW_TZ).strftime("%Y%m%d_%H%M%S_%f") + f"_{change_type}.json"
         path = os.path.join(event_dir, fname)
         parsed["change_type"] = change_type
         with open(path, "w", encoding="utf-8") as f:
