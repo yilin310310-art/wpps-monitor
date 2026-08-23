@@ -30,7 +30,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 執行迴歸測試（用真實樣本驗證解析邏輯沒壞）
-        run: python tests/test_parse_wpps.py
+        run: |
+          python tests/test_parse_wpps.py
+          python tests/test_parse_countymax.py
 
       - name: 執行抓取與產生網頁
         run: python scripts/run_all.py
