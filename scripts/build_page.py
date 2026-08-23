@@ -10,7 +10,7 @@
     任一邊是「-」（無資料）則不比較、維持黑字
   - 報次表頭本身：首筆快照灰底、新一報藍底、同報修改橘底
   - 最右欄附上「觀測雨量」，依「總雨量預測時效起始時間」到現在經過幾天，
-    自動挑選最接近的累積時段（最近1小時～5日累積，5日封頂）
+    自動挑選最接近的累積時段（本日累積起跳～5日累積封頂）
 """
 import glob
 import json
@@ -99,17 +99,15 @@ def _pick_observed_label(period_text, now):
     """依總雨量預測時效起始時間到現在經過幾天，挑最接近的累積時段標籤"""
     start = _parse_period_start(period_text, now)
     if start is None:
-        return "最近1小時"
+        return "本日累積"
     elapsed_days = (now - start).days
     if elapsed_days <= 0:
-        return "最近1小時"
-    if elapsed_days == 1:
         return "本日累積"
-    if elapsed_days == 2:
+    if elapsed_days == 1:
         return "2日累積"
-    if elapsed_days == 3:
+    if elapsed_days == 2:
         return "3日累積"
-    if elapsed_days == 4:
+    if elapsed_days == 3:
         return "4日累積"
     return "5日累積"
 
