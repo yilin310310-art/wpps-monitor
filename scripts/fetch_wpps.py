@@ -53,6 +53,8 @@ def _classify_change(old: dict, new: dict) -> str:
 
 
 def fetch_and_store() -> dict:
+    os.makedirs(WPPS_DATA_DIR, exist_ok=True)  # 確保資料夾存在，避免首次執行時寫檔失敗
+
     resp = requests.get(WPPS_DATA_URL, headers=WPPS_HEADERS, timeout=20)
     resp.raise_for_status()
     resp.encoding = "utf-8"
