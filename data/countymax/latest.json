@@ -1,0 +1,518 @@
+{
+  "fetched_at": "2026-08-23 11:59:25",
+  "durations": {
+    "最近1小時": {
+      "0.5": {
+        "rain": "81D66C2D79",
+        "stations": []
+      },
+      "1.0": {
+        "rain": "O1AH3",
+        "stations": []
+      },
+      "-": {
+        "rain": null,
+        "stations": []
+      },
+      "1.5": {
+        "rain": "C0F0E",
+        "stations": []
+      },
+      "2.5": {
+        "rain": "CAG10",
+        "stations": []
+      },
+      "6.0": {
+        "rain": "C0I53",
+        "stations": []
+      },
+      "13.5": {
+        "rain": "C0K60",
+        "stations": []
+      },
+      "3.0": {
+        "rain": "G2L02",
+        "stations": []
+      },
+      "16.0": {
+        "rain": "C2M9B",
+        "stations": []
+      },
+      "14.0": {
+        "rain": "88O95",
+        "stations": []
+      },
+      "42.0": {
+        "rain": "C1V3481V96",
+        "stations": []
+      },
+      "42.5": {
+        "rain": "C0R47",
+        "stations": []
+      },
+      "5.5": {
+        "rain": "C1U85",
+        "stations": []
+      },
+      "22.5": {
+        "rain": "C0Z33",
+        "stations": []
+      },
+      "17.0": {
+        "rain": "01S27",
+        "stations": []
+      },
+      "2.0": {
+        "rain": "C0W20",
+        "stations": []
+      },
+      "11.5": {
+        "rain": "C2W03",
+        "stations": []
+      }
+    },
+    "本日累積": {
+      "14.5": {
+        "rain": "46695",
+        "stations": []
+      },
+      "23.0": {
+        "rain": "C0A55",
+        "stations": []
+      },
+      "7.5": {
+        "rain": "46799",
+        "stations": []
+      },
+      "1.0": {
+        "rain": "C0C79",
+        "stations": []
+      },
+      "0.5": {
+        "rain": "C0D68CAD11",
+        "stations": []
+      },
+      "12.0": {
+        "rain": "C1D64",
+        "stations": []
+      },
+      "8.5": {
+        "rain": "46730",
+        "stations": []
+      },
+      "10.0": {
+        "rain": "01E23",
+        "stations": []
+      },
+      "4.5": {
+        "rain": "C2G87CAG10",
+        "stations": []
+      },
+      "7.0": {
+        "rain": "C0H9Z",
+        "stations": []
+      },
+      "28.5": {
+        "rain": "C0K29",
+        "stations": []
+      },
+      "15.5": {
+        "rain": "C0M73C2M91",
+        "stations": []
+      },
+      "60.0": {
+        "rain": "72M36",
+        "stations": []
+      },
+      "206.5": {
+        "rain": "C0X16",
+        "stations": []
+      },
+      "249.5": {
+        "rain": "CAP07",
+        "stations": []
+      },
+      "220.0": {
+        "rain": "01R04",
+        "stations": []
+      },
+      "37.0": {
+        "rain": "C0UB2",
+        "stations": []
+      },
+      "67.0": {
+        "rain": "C1S85",
+        "stations": []
+      },
+      "144.0": {
+        "rain": "C0SA9",
+        "stations": []
+      },
+      "37.5": {
+        "rain": "C2W03",
+        "stations": []
+      }
+    },
+    "2日累積": {
+      "134.0": {
+        "rain": "01B03",
+        "stations": []
+      },
+      "149.5": {
+        "rain": "C2A65",
+        "stations": []
+      },
+      "75.5": {
+        "rain": "A1A9UC1AC5",
+        "stations": []
+      },
+      "69.5": {
+        "rain": "CAC04",
+        "stations": []
+      },
+      "1.5": {
+        "rain": "C0D68CAD11",
+        "stations": []
+      },
+      "54.5": {
+        "rain": "21D17",
+        "stations": []
+      },
+      "20.0": {
+        "rain": "C0E96",
+        "stations": []
+      },
+      "80.5": {
+        "rain": "C1F9W",
+        "stations": []
+      },
+      "79.0": {
+        "rain": "C1G9D",
+        "stations": []
+      },
+      "71.0": {
+        "rain": "C2H9Q",
+        "stations": []
+      },
+      "102.0": {
+        "rain": "72K22",
+        "stations": []
+      },
+      "134.5": {
+        "rain": "C0M73",
+        "stations": []
+      },
+      "163.0": {
+        "rain": "72M36",
+        "stations": []
+      },
+      "433.0": {
+        "rain": "C0X16",
+        "stations": []
+      },
+      "501.5": {
+        "rain": "C0V71",
+        "stations": []
+      },
+      "488.0": {
+        "rain": "01Q92",
+        "stations": []
+      },
+      "105.5": {
+        "rain": "C0UA3",
+        "stations": []
+      },
+      "101.5": {
+        "rain": "C0Z06",
+        "stations": []
+      },
+      "256.0": {
+        "rain": "C0SA9",
+        "stations": []
+      },
+      "40.0": {
+        "rain": "46730",
+        "stations": []
+      },
+      "46.5": {
+        "rain": "C2W03",
+        "stations": []
+      },
+      "7.5": {
+        "rain": "46799",
+        "stations": []
+      }
+    },
+    "3日累積": {
+      "144.0": {
+        "rain": "01B03",
+        "stations": []
+      },
+      "201.0": {
+        "rain": "C2AK4",
+        "stations": []
+      },
+      "148.0": {
+        "rain": "A1AD4C1AC5",
+        "stations": []
+      },
+      "127.5": {
+        "rain": "21C14",
+        "stations": []
+      },
+      "1.5": {
+        "rain": "C0D68CAD11",
+        "stations": []
+      },
+      "94.0": {
+        "rain": "21D35",
+        "stations": []
+      },
+      "23.5": {
+        "rain": "C0E96",
+        "stations": []
+      },
+      "124.5": {
+        "rain": "C0FA7",
+        "stations": []
+      },
+      "79.5": {
+        "rain": "C1G9D",
+        "stations": []
+      },
+      "138.0": {
+        "rain": "C1H00",
+        "stations": []
+      },
+      "111.0": {
+        "rain": "72K22",
+        "stations": []
+      },
+      "141.5": {
+        "rain": "C0M73",
+        "stations": []
+      },
+      "203.5": {
+        "rain": "81M67",
+        "stations": []
+      },
+      "537.0": {
+        "rain": "C0X16",
+        "stations": []
+      },
+      "605.5": {
+        "rain": "C0V45",
+        "stations": []
+      },
+      "706.5": {
+        "rain": "C1R61",
+        "stations": []
+      },
+      "161.0": {
+        "rain": "C0UA3",
+        "stations": []
+      },
+      "157.0": {
+        "rain": "C0Z10",
+        "stations": []
+      },
+      "329.0": {
+        "rain": "C0SA9",
+        "stations": []
+      },
+      "69.5": {
+        "rain": "46730",
+        "stations": []
+      },
+      "51.5": {
+        "rain": "C2W03",
+        "stations": []
+      },
+      "13.0": {
+        "rain": "CAW01",
+        "stations": []
+      }
+    },
+    "4日累積": {
+      "181.0": {
+        "rain": "01B03",
+        "stations": []
+      },
+      "270.5": {
+        "rain": "C0AI1",
+        "stations": []
+      },
+      "187.0": {
+        "rain": "A1A9U",
+        "stations": []
+      },
+      "176.5": {
+        "rain": "21C14",
+        "stations": []
+      },
+      "3.5": {
+        "rain": "C0D68",
+        "stations": []
+      },
+      "204.5": {
+        "rain": "C0D54",
+        "stations": []
+      },
+      "29.5": {
+        "rain": "C0E96",
+        "stations": []
+      },
+      "156.0": {
+        "rain": "C0FA7",
+        "stations": []
+      },
+      "83.0": {
+        "rain": "C1G9D",
+        "stations": []
+      },
+      "150.0": {
+        "rain": "C0H9Z",
+        "stations": []
+      },
+      "130.0": {
+        "rain": "72K22",
+        "stations": []
+      },
+      "149.5": {
+        "rain": "C0M73",
+        "stations": []
+      },
+      "238.0": {
+        "rain": "81M67",
+        "stations": []
+      },
+      "617.5": {
+        "rain": "C0X16",
+        "stations": []
+      },
+      "729.5": {
+        "rain": "C0V45",
+        "stations": []
+      },
+      "790.5": {
+        "rain": "C1R61",
+        "stations": []
+      },
+      "273.0": {
+        "rain": "C0U96",
+        "stations": []
+      },
+      "193.0": {
+        "rain": "C0TA2",
+        "stations": []
+      },
+      "357.5": {
+        "rain": "C0SA9",
+        "stations": []
+      },
+      "88.0": {
+        "rain": "46730",
+        "stations": []
+      },
+      "64.0": {
+        "rain": "C0W16",
+        "stations": []
+      },
+      "52.0": {
+        "rain": "46799",
+        "stations": []
+      }
+    },
+    "5日累積": {
+      "191.0": {
+        "rain": "01B03",
+        "stations": []
+      },
+      "299.0": {
+        "rain": "C0AI1",
+        "stations": []
+      },
+      "198.5": {
+        "rain": "A1A9U",
+        "stations": []
+      },
+      "199.0": {
+        "rain": "21C14",
+        "stations": []
+      },
+      "10.0": {
+        "rain": "CAD05",
+        "stations": []
+      },
+      "209.5": {
+        "rain": "C0D54",
+        "stations": []
+      },
+      "63.0": {
+        "rain": "C1E48",
+        "stations": []
+      },
+      "189.5": {
+        "rain": "C0FA7",
+        "stations": []
+      },
+      "99.0": {
+        "rain": "C1G69",
+        "stations": []
+      },
+      "168.5": {
+        "rain": "C0H9Z",
+        "stations": []
+      },
+      "149.0": {
+        "rain": "88K59",
+        "stations": []
+      },
+      "163.5": {
+        "rain": "CAL07",
+        "stations": []
+      },
+      "281.5": {
+        "rain": "81M67",
+        "stations": []
+      },
+      "626.5": {
+        "rain": "C0X16",
+        "stations": []
+      },
+      "762.5": {
+        "rain": "C0V81",
+        "stations": []
+      },
+      "811.0": {
+        "rain": "C1R61",
+        "stations": []
+      },
+      "329.0": {
+        "rain": "C0U96",
+        "stations": []
+      },
+      "213.0": {
+        "rain": "C0TA2",
+        "stations": []
+      },
+      "358.5": {
+        "rain": "C0SA9",
+        "stations": []
+      },
+      "88.0": {
+        "rain": "46730",
+        "stations": []
+      },
+      "78.0": {
+        "rain": "C0W16",
+        "stations": []
+      },
+      "65.5": {
+        "rain": "46799",
+        "stations": []
+      }
+    }
+  },
+  "errors": {}
+}
