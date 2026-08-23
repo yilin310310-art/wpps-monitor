@@ -13,522 +13,314 @@
   .table-scroll { overflow-x:auto; max-width:100%; }
   table.cmp-table { border-collapse: collapse; font-size:0.82rem; white-space:nowrap; }
   table.cmp-table th, table.cmp-table td { border:1px solid #ccc; padding:4px 8px; text-align:center; }
-  table.cmp-table thead th { background:#e9edf2; position:sticky; top:0; }
+  table.cmp-table th { background:#e9edf2; position:sticky; top:0; }
+  th.sub-hdr { font-weight:normal; font-size:0.78rem; }
   .sticky-col { position:sticky; left:0; background:#f5f6f8; z-index:2; font-weight:bold; }
-  thead .sticky-col { z-index:3; }
-  td.changed { background:#ffe3e3; font-weight:bold; }
+  tr th.sticky-col { z-index:3; }
+  td.up { color:#c00; font-weight:bold; }
+  td.down { color:#06c; font-weight:bold; }
+  td.obs-col { background:#f7f9e8; font-weight:bold; }
   th.hdr-new { background:#d6e8ff; }
   th.hdr-modified { background:#ffe6c2; }
   th.hdr-first { background:#e9edf2; }
-  .period { font-weight:normal; font-size:0.75rem; color:#555; }
+  th.hdr-observed { background:#eef4d8; }
+  .period { font-weight:normal; font-size:0.72rem; color:#555; }
   .legend span { display:inline-block; margin-right:16px; padding:2px 8px; border-radius:4px; font-size:0.8rem; }
   footer { margin-top:3rem; font-size:0.75rem; color:#999; }
 </style>
 </head>
 <body>
 <h1>颱風/豪雨事件 雨量預報歷次報次比對</h1>
-<p class="muted">產生時間：2026-08-23 19:43:12（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
+<p class="muted">產生時間：2026-08-23 21:03:17（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
 <div class="legend">
   <span style="background:#e9edf2;">灰底表頭 = 首筆快照</span>
   <span style="background:#d6e8ff;">藍底表頭 = 新一報</span>
   <span style="background:#ffe6c2;">橘底表頭 = 同報時效/內容被事後修改</span>
-  <span style="background:#ffe3e3;">紅底儲存格 = 該分區與前一欄相比數值不同</span>
+  <span style="color:#c00;">紅字 = 與前一報相比預報上修</span>
+  <span style="color:#06c;">藍字 = 與前一報相比預報下修</span>
+  <span style="background:#eef4d8;">觀測雨量欄 = 依事件經過天數自動挑選對應累積時段的實測值</span>
 </div>
 <h2>0822低壓帶及西南風豪雨事件各地區總雨量預測</h2>
 <h3>總雨量預測</h3>
 <div class="table-scroll"><table class="cmp-table">
-<thead><tr><th class='sticky-col'>分區</th>
-<th class='hdr-first'>發布時間：115年08月23日10時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new'>發布時間：115年08月23日13時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new'>發布時間：115年08月23日16時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new'>發布時間：115年08月23日19時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-</tr></thead><tbody>
+<tr><th class='sticky-col' rowspan='2'>分區</th>
+<th class='hdr-first' colspan='2'>發布時間：115年08月23日10時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日13時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日16時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日19時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
+<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(最近1小時)<br><span class='period'>2026/08/23 19:40~2026/08/23 20:40</span></span></th>
+</tr>
+<tr>
+<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
+<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
+<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
+<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
+</tr>
 <tr><td class='sticky-col'>基隆市</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>臺北市</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class=''>80 - 150</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>新北市</td>
-<td class=''>200 - 300 / 200 - 300</td>
-<td class=''>200 - 300 / 200 - 300</td>
-<td class=''>200 - 300 / 200 - 300</td>
-<td class=''>200 - 300 / 200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class=''>200 - 300</td>
+<td class='obs-col'>1.0</td>
 </tr>
 <tr><td class='sticky-col'>桃園市</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>新竹市</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>新竹縣</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class='obs-col'>0.5</td>
 </tr>
 <tr><td class='sticky-col'>苗栗縣</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 250</td>
+<td class='obs-col'>8.5</td>
 </tr>
 <tr><td class='sticky-col'>臺中市</td>
-<td class=''>100 - 200 / 200 - 400</td>
-<td class=''>100 - 200 / 200 - 400</td>
-<td class=''>100 - 200 / 200 - 400</td>
-<td class=''>100 - 200 / 200 - 400</td>
+<td class=''>100 - 200</td>
+<td class=''>200 - 400</td>
+<td class=''>100 - 200</td>
+<td class=''>200 - 400</td>
+<td class=''>100 - 200</td>
+<td class=''>200 - 400</td>
+<td class=''>100 - 200</td>
+<td class=''>200 - 400</td>
+<td class='obs-col'>2.5</td>
 </tr>
 <tr><td class='sticky-col'>彰化縣</td>
-<td class=''>100 - 200 / -</td>
-<td class=''>100 - 200 / -</td>
-<td class=''>100 - 200 / -</td>
-<td class=''>100 - 200 / -</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
+<td class='obs-col'>2.5</td>
 </tr>
 <tr><td class='sticky-col'>南投縣</td>
-<td class=''>100 - 200 / 300 - 500</td>
-<td class=''>100 - 200 / 300 - 500</td>
-<td class=''>100 - 200 / 300 - 500</td>
-<td class=''>100 - 200 / 300 - 500</td>
+<td class=''>100 - 200</td>
+<td class=''>300 - 500</td>
+<td class=''>100 - 200</td>
+<td class=''>300 - 500</td>
+<td class=''>100 - 200</td>
+<td class=''>300 - 500</td>
+<td class=''>100 - 200</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>3.0</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
-<td class=''>150 - 300 / 200 - 350</td>
-<td class=''>150 - 300 / 200 - 350</td>
-<td class=''>150 - 300 / 200 - 350</td>
-<td class=''>150 - 300 / 200 - 350</td>
+<td class=''>150 - 300</td>
+<td class=''>200 - 350</td>
+<td class=''>150 - 300</td>
+<td class=''>200 - 350</td>
+<td class=''>150 - 300</td>
+<td class=''>200 - 350</td>
+<td class=''>150 - 300</td>
+<td class=''>200 - 350</td>
+<td class='obs-col'>4.0</td>
 </tr>
 <tr><td class='sticky-col'>嘉義市</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class='obs-col'>2.5</td>
 </tr>
 <tr><td class='sticky-col'>嘉義縣</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>13.5</td>
 </tr>
 <tr><td class='sticky-col'>臺南市</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
-<td class=''>300 - 500 / 300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>37.5</td>
 </tr>
 <tr><td class='sticky-col'>高雄市</td>
-<td class=''>400 - 600 / 500 - 700</td>
-<td class=''>400 - 600 / 500 - 700</td>
-<td class=''>400 - 600 / 500 - 700</td>
-<td class=''>400 - 600 / 500 - 700</td>
+<td class=''>400 - 600</td>
+<td class=''>500 - 700</td>
+<td class=''>400 - 600</td>
+<td class=''>500 - 700</td>
+<td class=''>400 - 600</td>
+<td class=''>500 - 700</td>
+<td class=''>400 - 600</td>
+<td class=''>500 - 700</td>
+<td class='obs-col'>54.0</td>
 </tr>
 <tr><td class='sticky-col'>屏東縣</td>
-<td class=''>500 - 700 / 500 - 800</td>
-<td class=''>500 - 700 / 500 - 800</td>
-<td class=''>500 - 700 / 500 - 800</td>
-<td class=''>500 - 700 / 500 - 800</td>
+<td class=''>500 - 700</td>
+<td class=''>500 - 800</td>
+<td class=''>500 - 700</td>
+<td class=''>500 - 800</td>
+<td class=''>500 - 700</td>
+<td class=''>500 - 800</td>
+<td class=''>500 - 700</td>
+<td class=''>500 - 800</td>
+<td class='obs-col'>21.0</td>
 </tr>
 <tr><td class='sticky-col'>恆春半島</td>
-<td class=''>400 - 600 / -</td>
-<td class=''>400 - 600 / -</td>
-<td class=''>400 - 600 / -</td>
-<td class=''>400 - 600 / -</td>
+<td class=''>400 - 600</td>
+<td class=''>-</td>
+<td class=''>400 - 600</td>
+<td class=''>-</td>
+<td class=''>400 - 600</td>
+<td class=''>-</td>
+<td class=''>400 - 600</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>宜蘭縣</td>
-<td class=''>200 - 350 / 300 - 500</td>
-<td class=''>200 - 350 / 300 - 500</td>
-<td class=''>200 - 350 / 300 - 500</td>
-<td class=''>200 - 350 / 300 - 500</td>
+<td class=''>200 - 350</td>
+<td class=''>300 - 500</td>
+<td class=''>200 - 350</td>
+<td class=''>300 - 500</td>
+<td class=''>200 - 350</td>
+<td class=''>300 - 500</td>
+<td class=''>200 - 350</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>6.0</td>
 </tr>
 <tr><td class='sticky-col'>花蓮縣</td>
-<td class=''>300 - 500 / 400 - 600</td>
-<td class=''>300 - 500 / 400 - 600</td>
-<td class=''>300 - 500 / 400 - 600</td>
-<td class=''>300 - 500 / 400 - 600</td>
+<td class=''>300 - 500</td>
+<td class=''>400 - 600</td>
+<td class=''>300 - 500</td>
+<td class=''>400 - 600</td>
+<td class=''>300 - 500</td>
+<td class=''>400 - 600</td>
+<td class=''>300 - 500</td>
+<td class=''>400 - 600</td>
+<td class='obs-col'>36.5</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
-<td class=''>400 - 600 / 400 - 600</td>
-<td class=''>400 - 600 / 400 - 600</td>
-<td class=''>400 - 600 / 400 - 600</td>
-<td class=''>400 - 600 / 400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class=''>400 - 600</td>
+<td class='obs-col'>21.0</td>
 </tr>
 <tr><td class='sticky-col'>蘭嶼綠島</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>連江縣</td>
-<td class=''>50 - 100 / -</td>
-<td class=''>50 - 100 / -</td>
-<td class=''>50 - 100 / -</td>
-<td class=''>50 - 100 / -</td>
+<td class=''>50 - 100</td>
+<td class=''>-</td>
+<td class=''>50 - 100</td>
+<td class=''>-</td>
+<td class=''>50 - 100</td>
+<td class=''>-</td>
+<td class=''>50 - 100</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>金門縣</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class=''>80 - 150</td>
+<td class=''>-</td>
+<td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>澎湖縣</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
-<td class=''>150 - 300 / -</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class=''>150 - 300</td>
+<td class=''>-</td>
+<td class='obs-col'>2.5</td>
 </tr>
-</tbody></table></div>
-<h3>24小時雨量預測</h3>
-<div class="table-scroll"><table class="cmp-table">
-<thead><tr><th class='sticky-col'>分區</th>
-<th class='hdr-first'>發布時間：115年08月23日10時00分(正報)<br><span class='period'>08月23日14時至08月24日14時</span></th>
-<th class='hdr-new'>發布時間：115年08月23日13時00分(加報)<br><span class='period'>08月23日14時至08月24日14時</span></th>
-<th class='hdr-new'>發布時間：115年08月23日16時00分(正報)<br><span class='period'>08月23日20時至08月24日20時</span></th>
-<th class='hdr-new'>發布時間：115年08月23日19時00分(加報)<br><span class='period'>08月23日20時至08月24日20時</span></th>
-</tr></thead><tbody>
-<tr><td class='sticky-col'>基隆市</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-</tr>
-<tr><td class='sticky-col'>臺北市</td>
-<td class=''>50 - 100 / 50 - 100</td>
-<td class=''>50 - 100 / 50 - 100</td>
-<td class=''>50 - 100 / 50 - 100</td>
-<td class=''>50 - 100 / 50 - 100</td>
-</tr>
-<tr><td class='sticky-col'>新北市</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
-<td class=''>80 - 150 / 80 - 150</td>
-</tr>
-<tr><td class='sticky-col'>桃園市</td>
-<td class=''>< 80 / 80 - 150</td>
-<td class=''>< 80 / 80 - 150</td>
-<td class=''>< 80 / 80 - 150</td>
-<td class=''>< 80 / 80 - 150</td>
-</tr>
-<tr><td class='sticky-col'>新竹市</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-</tr>
-<tr><td class='sticky-col'>新竹縣</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-</tr>
-<tr><td class='sticky-col'>苗栗縣</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-<td class=''>50 - 100 / 80 - 150</td>
-</tr>
-<tr><td class='sticky-col'>臺中市</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-</tr>
-<tr><td class='sticky-col'>彰化縣</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-</tr>
-<tr><td class='sticky-col'>南投縣</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-<td class=''>80 - 150 / 150 - 250</td>
-</tr>
-<tr><td class='sticky-col'>雲林縣</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-</tr>
-<tr><td class='sticky-col'>嘉義市</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-<td class=''>80 - 150 / -</td>
-</tr>
-<tr><td class='sticky-col'>嘉義縣</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-<td class=''>100 - 190 / 100 - 190</td>
-</tr>
-<tr><td class='sticky-col'>臺南市</td>
-<td class=''>200 - 300 / 150 - 300</td>
-<td class=''>200 - 300 / 150 - 300</td>
-<td class='changed'>200 - 340 / 150 - 300</td>
-<td class=''>200 - 340 / 150 - 300</td>
-</tr>
-<tr><td class='sticky-col'>高雄市</td>
-<td class=''>250 - 400 / 200 - 400</td>
-<td class=''>250 - 400 / 200 - 400</td>
-<td class=''>250 - 400 / 200 - 400</td>
-<td class=''>250 - 400 / 200 - 400</td>
-</tr>
-<tr><td class='sticky-col'>屏東縣</td>
-<td class=''>300 - 400 / 300 - 400</td>
-<td class=''>300 - 400 / 300 - 400</td>
-<td class=''>300 - 400 / 300 - 400</td>
-<td class=''>300 - 400 / 300 - 400</td>
-</tr>
-<tr><td class='sticky-col'>恆春半島</td>
-<td class=''>200 - 340 / -</td>
-<td class=''>200 - 340 / -</td>
-<td class=''>200 - 340 / -</td>
-<td class=''>200 - 340 / -</td>
-</tr>
-<tr><td class='sticky-col'>宜蘭縣</td>
-<td class=''>150 - 250 / 200 - 340</td>
-<td class=''>150 - 250 / 200 - 340</td>
-<td class=''>150 - 250 / 200 - 340</td>
-<td class=''>150 - 250 / 200 - 340</td>
-</tr>
-<tr><td class='sticky-col'>花蓮縣</td>
-<td class=''>200 - 340 / 250 - 400</td>
-<td class=''>200 - 340 / 250 - 400</td>
-<td class=''>200 - 340 / 250 - 400</td>
-<td class=''>200 - 340 / 250 - 400</td>
-</tr>
-<tr><td class='sticky-col'>臺東縣</td>
-<td class=''>200 - 340 / 200 - 340</td>
-<td class=''>200 - 340 / 200 - 340</td>
-<td class=''>200 - 340 / 200 - 340</td>
-<td class=''>200 - 340 / 200 - 340</td>
-</tr>
-<tr><td class='sticky-col'>蘭嶼綠島</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-</tr>
-<tr><td class='sticky-col'>連江縣</td>
-<td class=''>< 50 / -</td>
-<td class=''>< 50 / -</td>
-<td class=''>< 50 / -</td>
-<td class=''>< 50 / -</td>
-</tr>
-<tr><td class='sticky-col'>金門縣</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-<td class=''>< 80 / -</td>
-</tr>
-<tr><td class='sticky-col'>澎湖縣</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-<td class=''>100 - 190 / -</td>
-</tr>
-</tbody></table></div>
-<h2>各縣市雨量最大值（實測參考）</h2>
-<p class='muted'>更新時間：2026-08-23 19:43:12</p>
-<div class='table-scroll'><table class='cmp-table'>
-<thead><tr><th class='sticky-col'>縣市</th>
-<th>最近1小時<br><span class='period'>2026/08/23 18:30~2026/08/23 19:30</span></th>
-<th>本日累積<br><span class='period'>2026/08/23 00:00~2026/08/23 19:30</span></th>
-<th>2日累積<br><span class='period'>2026/08/22 00:00~2026/08/23 19:30</span></th>
-<th>3日累積<br><span class='period'>2026/08/21 00:00~2026/08/23 19:30</span></th>
-<th>4日累積<br><span class='period'>2026/08/20 00:00~2026/08/23 19:30</span></th>
-<th>5日累積<br><span class='period'>2026/08/19 00:00~2026/08/23 19:30</span></th>
-</tr></thead><tbody>
-<tr><td class='sticky-col'>基隆市</td>
-<td>1.0</td>
-<td>15.0</td>
-<td>134.0</td>
-<td>144.0</td>
-<td>181.0</td>
-<td>191.0</td>
-</tr>
-<tr><td class='sticky-col'>新北市</td>
-<td>1.0</td>
-<td>26.5</td>
-<td>151.5</td>
-<td>201.0</td>
-<td>270.5</td>
-<td>299.0</td>
-</tr>
-<tr><td class='sticky-col'>臺北市</td>
-<td>-</td>
-<td>7.5</td>
-<td>75.5</td>
-<td>148.0</td>
-<td>187.0</td>
-<td>198.5</td>
-</tr>
-<tr><td class='sticky-col'>桃園市</td>
-<td>-</td>
-<td>4.5</td>
-<td>70.5</td>
-<td>127.5</td>
-<td>176.5</td>
-<td>199.0</td>
-</tr>
-<tr><td class='sticky-col'>新竹市</td>
-<td>-</td>
-<td>2.0</td>
-<td>3.0</td>
-<td>3.0</td>
-<td>3.5</td>
-<td>12.0</td>
-</tr>
-<tr><td class='sticky-col'>新竹縣</td>
-<td>0.5</td>
-<td>22.0</td>
-<td>66.0</td>
-<td>101.0</td>
-<td>208.5</td>
-<td>213.5</td>
-</tr>
-<tr><td class='sticky-col'>苗栗縣</td>
-<td>0.5</td>
-<td>47.0</td>
-<td>49.0</td>
-<td>58.0</td>
-<td>58.5</td>
-<td>73.5</td>
-</tr>
-<tr><td class='sticky-col'>臺中市</td>
-<td>1.5</td>
-<td>86.0</td>
-<td>99.0</td>
-<td>128.0</td>
-<td>159.5</td>
-<td>193.0</td>
-</tr>
-<tr><td class='sticky-col'>彰化縣</td>
-<td>3.0</td>
-<td>30.0</td>
-<td>91.0</td>
-<td>93.0</td>
-<td>93.0</td>
-<td>105.5</td>
-</tr>
-<tr><td class='sticky-col'>南投縣</td>
-<td>3.0</td>
-<td>30.0</td>
-<td>77.0</td>
-<td>146.0</td>
-<td>171.0</td>
-<td>188.0</td>
-</tr>
-<tr><td class='sticky-col'>雲林縣</td>
-<td>6.0</td>
-<td>60.0</td>
-<td>140.0</td>
-<td>145.5</td>
-<td>163.0</td>
-<td>175.0</td>
-</tr>
-<tr><td class='sticky-col'>嘉義市</td>
-<td>1.5</td>
-<td>76.5</td>
-<td>195.5</td>
-<td>202.5</td>
-<td>211.0</td>
-<td>222.5</td>
-</tr>
-<tr><td class='sticky-col'>嘉義縣</td>
-<td>11.0</td>
-<td>149.5</td>
-<td>230.5</td>
-<td>277.0</td>
-<td>326.5</td>
-<td>336.0</td>
-</tr>
-<tr><td class='sticky-col'>臺南市</td>
-<td>25.5</td>
-<td>319.0</td>
-<td>553.5</td>
-<td>649.5</td>
-<td>731.0</td>
-<td>739.0</td>
-</tr>
-<tr><td class='sticky-col'>高雄市</td>
-<td>46.0</td>
-<td>471.0</td>
-<td>688.5</td>
-<td>770.5</td>
-<td>880.5</td>
-<td>936.5</td>
-</tr>
-<tr><td class='sticky-col'>屏東縣</td>
-<td>41.5</td>
-<td>344.0</td>
-<td>625.0</td>
-<td>822.5</td>
-<td>908.0</td>
-<td>927.0</td>
-</tr>
-<tr><td class='sticky-col'>宜蘭縣</td>
-<td>7.0</td>
-<td>40.5</td>
-<td>109.5</td>
-<td>165.0</td>
-<td>282.5</td>
-<td>338.5</td>
-</tr>
-<tr><td class='sticky-col'>花蓮縣</td>
-<td>20.0</td>
-<td>96.5</td>
-<td>107.5</td>
-<td>176.0</td>
-<td>216.0</td>
-<td>235.0</td>
-</tr>
-<tr><td class='sticky-col'>臺東縣</td>
-<td>13.5</td>
-<td>206.5</td>
-<td>318.5</td>
-<td>391.5</td>
-<td>420.5</td>
-<td>421.0</td>
-</tr>
-<tr><td class='sticky-col'>澎湖縣</td>
-<td>1.5</td>
-<td>11.5</td>
-<td>43.0</td>
-<td>72.5</td>
-<td>91.0</td>
-<td>91.0</td>
-</tr>
-<tr><td class='sticky-col'>金門縣</td>
-<td>-</td>
-<td>38.0</td>
-<td>47.0</td>
-<td>52.0</td>
-<td>64.0</td>
-<td>78.0</td>
-</tr>
-<tr><td class='sticky-col'>連江縣</td>
-<td>0.5</td>
-<td>8.5</td>
-<td>8.5</td>
-<td>13.5</td>
-<td>53.0</td>
-<td>66.5</td>
-</tr>
-</tbody></table></div>
-<footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。</footer>
+</table></div>
+<footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。（24小時雨量預測資料持續存檔，暫未於本頁顯示）</footer>
 </body>
 </html>
