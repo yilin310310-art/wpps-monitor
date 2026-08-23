@@ -4,13 +4,15 @@
 產生一份 docs/index.html 靜態網頁。
 
 呈現邏輯（依需求調整版）：
-  - 每個事件一個區塊，只顯示「總雨量預測」（24小時雨量預測持續存檔但不顯示）
-  - 每一報拆成「平地」「山區」兩欄
-  - 跟前一報同一格比較：數值上修＝紅字，下修＝藍字，相同＝黑字，
-    任一邊是「-」（無資料）則不比較、維持黑字
-  - 報次表頭本身：首筆快照灰底、新一報藍底、同報修改橘底
-  - 最右欄附上「觀測雨量」，依「總雨量預測時效起始時間」到現在經過幾天，
-    自動挑選最接近的累積時段（本日累積起跳～5日累積封頂）
+  - 每個事件依「總雨量預測時效區間文字」分成多個區塊(block)：
+      時效沒變 -> 沿用同一區塊，往右加報次欄
+      時效變了(氣象署改了預測起訖日期) -> 開一個新區塊，放在最右邊，
+      之後新報次都加進這個最新區塊
+  - 每個區塊獨立呈現：分區欄 + 該區塊所有報次(各拆平地/山區) + 一欄觀測雨量
+  - 舊區塊不會再有新報次，但觀測雨量會持續更新，直到該區塊自己的時效
+    結束時間到了為止，之後凍結（存成 _frozen_observed.json，不再跟著即時資料變動）
+  - 跟前一報同一格比較：數值上修＝紅字，下修＝藍字，相同＝黑字
+  - 24小時雨量預測持續存檔但不顯示於本頁
 """
 import glob
 import json
@@ -23,10 +25,12 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import WPPS_DATA_DIR, COUNTYMAX_DATA_DIR, DOCS_DIR, EXPECTED_AREAS
 
 TW_TZ = timezone(timedelta(hours=8))
+DURATION_ORDER = ["本日累積", "2日累積", "3日累積", "4日累積", "5日累積"]
 
 
 def _load_event_snapshots(event_dir: str):
-    files = sorted(glob.glob(os.path.join(event_dir, "*.json")))
+    files = sorted(f for f in glob.glob(os.path.join(event_dir, "*.json"))
+                    if not os.path.basename(f).startswith("_"))
     snapshots = []
     for fp in files:
         with open(fp, encoding="utf-8") as f:
@@ -76,6 +80,20 @@ def _compare_class(old_text, new_text):
     return ""
 
 
+def _resolve_year(month, day, hour, now):
+    """從月/日/時猜出正確的年份（處理跨年邊界），回傳最接近now的datetime"""
+    hour = min(hour, 23)
+    candidates = []
+    for y in (now.year - 1, now.year, now.year + 1):
+        try:
+            candidates.append(datetime(y, month, day, hour, tzinfo=TW_TZ))
+        except ValueError:
+            continue
+    if not candidates:
+        return None
+    return min(candidates, key=lambda d: abs((d - now).total_seconds()))
+
+
 def _parse_period_start(period_text, now):
     """從 '自08月23日00時至8月25日24時止' 這種文字抓出起始時間"""
     if not period_text:
@@ -84,32 +102,31 @@ def _parse_period_start(period_text, now):
     if not m:
         return None
     month, day, hour = (int(x) for x in m.groups())
-    year = now.year
-    try:
-        dt = datetime(year, month, day, min(hour, 23), tzinfo=TW_TZ)
-    except ValueError:
+    return _resolve_year(month, day, hour, now)
+
+
+def _parse_period_end(period_text, now):
+    """從 '自08月23日00時至8月25日24時止' 這種文字抓出結束時間（處理24時=隔天0時）"""
+    if not period_text:
         return None
-    # 若算出來的日期離現在超過200天，代表跨年了，往前一年校正
-    if (dt - now).days > 200:
-        dt = dt.replace(year=year - 1)
-    return dt
+    m = re.search(r"至\s*(\d{1,2})月(\d{1,2})日(\d{1,2})時", period_text)
+    if not m:
+        return None
+    month, day, hour = (int(x) for x in m.groups())
+    extra_day = 0
+    if hour >= 24:
+        extra_day = 1
+        hour -= 24
+    dt = _resolve_year(month, day, hour, now)
+    if dt is None:
+        return None
+    return dt + timedelta(days=extra_day)
 
 
-def _pick_observed_label(period_text, now):
-    """依總雨量預測時效起始時間到現在經過幾天，挑最接近的累積時段標籤"""
-    start = _parse_period_start(period_text, now)
-    if start is None:
-        return "本日累積"
-    elapsed_days = (now - start).days
-    if elapsed_days <= 0:
-        return "本日累積"
-    if elapsed_days == 1:
-        return "2日累積"
-    if elapsed_days == 2:
-        return "3日累積"
-    if elapsed_days == 3:
-        return "4日累積"
-    return "5日累積"
+def _pick_duration_label(elapsed_days):
+    """依經過天數挑累積時段標籤：當天用本日累積，之後每過一天多一天累積，5日封頂"""
+    idx = max(0, min(elapsed_days, len(DURATION_ORDER) - 1))
+    return DURATION_ORDER[idx]
 
 
 def _load_countymax_latest():
@@ -120,10 +137,80 @@ def _load_countymax_latest():
         return json.load(f)
 
 
-def _render_table(snapshots, table_key: str, title: str, countymax_data, now):
-    """table_key: 目前只會傳 'all_precip'（24h表已不顯示）"""
-    if not snapshots:
-        return f"<p>（目前尚無{title}資料）</p>"
+def _group_into_blocks(snapshots, table_key):
+    """依總雨量預測的時效區間文字分組，時效文字相同視為同一區塊"""
+    blocks = []
+    for snap in snapshots:
+        period = (snap.get(table_key) or {}).get("period", "")
+        if blocks and blocks[-1]["period"] == period:
+            blocks[-1]["snapshots"].append(snap)
+        else:
+            blocks.append({"period": period, "snapshots": [snap]})
+    return blocks
+
+
+def _load_frozen_store(event_dir):
+    path = os.path.join(event_dir, "_frozen_observed.json")
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def _save_frozen_store(event_dir, store):
+    path = os.path.join(event_dir, "_frozen_observed.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(store, f, ensure_ascii=False, indent=2)
+
+
+def _get_observed_for_block(period_text, now, countymax_data, frozen_store, is_latest_block):
+    """
+    回傳 (counties_dict, label文字, 觀測時間範圍文字, 是否已凍結)
+    - 最新區塊：一律用動態經過天數挑選，持續更新
+    - 舊區塊：時效還沒結束前一樣動態更新；結束後改用/建立凍結值
+    """
+    block_end = _parse_period_end(period_text, now)
+    frozen = frozen_store.get(period_text)
+
+    if not is_latest_block and frozen is not None:
+        return frozen["counties"], frozen["label"], frozen.get("range_text", ""), True
+
+    if not is_latest_block and block_end is not None and now >= block_end:
+        # 時效剛結束，準備凍結：用目前最新一次觀測值定案
+        label = _pick_duration_label((now - _parse_period_start(period_text, now)).days) \
+            if _parse_period_start(period_text, now) else "本日累積"
+        counties = {}
+        range_text = ""
+        if countymax_data:
+            dur = countymax_data.get("durations", {}).get(label, {})
+            counties = dur.get("counties", {})
+            p = dur.get("period", {})
+            if p.get("timefrom"):
+                range_text = f"{p.get('timefrom','')}~{p.get('timeto','')}"
+        frozen_store[period_text] = {
+            "counties": counties, "label": label, "range_text": range_text,
+            "frozen_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+        return counties, label, range_text, True
+
+    # 動態更新中（最新區塊，或舊區塊時效還沒結束）
+    start = _parse_period_start(period_text, now)
+    elapsed_days = (now - start).days if start else 0
+    label = _pick_duration_label(elapsed_days)
+    counties = {}
+    range_text = ""
+    if countymax_data:
+        dur = countymax_data.get("durations", {}).get(label, {})
+        counties = dur.get("counties", {})
+        p = dur.get("period", {})
+        if p.get("timefrom"):
+            range_text = f"{p.get('timefrom','')}~{p.get('timeto','')}"
+    return counties, label, range_text, False
+
+
+def _render_block(block, table_key, countymax_data, now, frozen_store, is_latest_block):
+    period_text = block["period"]
+    snapshots = block["snapshots"]
 
     areas = list(EXPECTED_AREAS)
     seen = set(areas)
@@ -133,37 +220,25 @@ def _render_table(snapshots, table_key: str, title: str, countymax_data, now):
                 areas.append(a)
                 seen.add(a)
 
-    # 挑選觀測雨量要用的時段：用「最新一筆快照」的時效起始時間去判斷
-    latest_period = (snapshots[-1].get(table_key) or {}).get("period", "")
-    observed_label = _pick_observed_label(latest_period, now)
-    observed_counties = {}
-    observed_period_text = ""
-    if countymax_data:
-        dur = countymax_data.get("durations", {}).get(observed_label, {})
-        observed_counties = dur.get("counties", {})
-        p = dur.get("period", {})
-        if p.get("timefrom"):
-            observed_period_text = f"{p.get('timefrom','')}~{p.get('timeto','')}"
+    observed_counties, observed_label, observed_range, is_frozen = _get_observed_for_block(
+        period_text, now, countymax_data, frozen_store, is_latest_block
+    )
+    frozen_tag = "（已定案）" if is_frozen else "（更新中）"
 
-    html = [f"<h3>{title}</h3>", '<div class="table-scroll"><table class="cmp-table">']
-
-    # 表頭第一列：分區 + 每報（colspan=2）+ 觀測雨量
+    html = ['<div class="block-card"><table class="cmp-table">']
+    html.append(f"<caption>{period_text}</caption>")
     html.append("<tr><th class='sticky-col' rowspan='2'>分區</th>")
     for snap in snapshots:
         tbl = snap.get(table_key) or {}
         pub = tbl.get("publish_time", "")
-        period = tbl.get("period", "")
         cls = _report_header_class(snap)
-        html.append(
-            f"<th class='{cls}' colspan='2'>{pub}<br>"
-            f"<span class='period'>{period}</span></th>"
-        )
-    obs_sub = f"<br><span class='period'>{observed_period_text}</span>" if observed_period_text else ""
-    html.append(f"<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>({observed_label}){obs_sub}</span></th>")
-    html.append("</tr>")
-
-    # 表頭第二列：每報底下的 平地/山區
-    html.append("<tr>")
+        html.append(f"<th class='{cls}' colspan='2'>{pub}</th>")
+    obs_sub = f"<br><span class='period'>{observed_range}</span>" if observed_range else ""
+    html.append(
+        f"<th class='hdr-observed' rowspan='2'>觀測雨量<br>"
+        f"<span class='period'>({observed_label}){frozen_tag}{obs_sub}</span></th>"
+    )
+    html.append("</tr><tr>")
     for _ in snapshots:
         html.append("<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>")
     html.append("</tr>")
@@ -193,6 +268,28 @@ def _render_table(snapshots, table_key: str, title: str, countymax_data, now):
     return "\n".join(html)
 
 
+def _render_event(event_dir, snapshots, table_key, title, countymax_data, now):
+    if not snapshots:
+        return f"<p>（目前尚無{title}資料）</p>"
+
+    blocks = _group_into_blocks(snapshots, table_key)
+    frozen_store = _load_frozen_store(event_dir)
+    before = json.dumps(frozen_store, sort_keys=True)
+
+    html = [f"<h3>{title}</h3>", '<div class="blocks-row">']
+    for i, block in enumerate(blocks):
+        is_latest = (i == len(blocks) - 1)
+        html.append(_render_block(block, table_key, countymax_data, now,
+                                   frozen_store, is_latest))
+    html.append("</div>")
+
+    after = json.dumps(frozen_store, sort_keys=True)
+    if after != before:
+        _save_frozen_store(event_dir, frozen_store)
+
+    return "\n".join(html)
+
+
 PAGE_TEMPLATE = """<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -205,10 +302,12 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   h2 {{ margin-top: 2.5rem; border-bottom: 2px solid #ccc; padding-bottom: 4px; }}
   h3 {{ margin-top: 1.5rem; }}
   .muted {{ color:#777; font-size:0.85rem; }}
-  .table-scroll {{ overflow-x:auto; max-width:100%; }}
+  .blocks-row {{ display:flex; gap:16px; overflow-x:auto; align-items:flex-start; padding-bottom:8px; }}
+  .block-card {{ flex:0 0 auto; }}
   table.cmp-table {{ border-collapse: collapse; font-size:0.82rem; white-space:nowrap; }}
+  table.cmp-table caption {{ text-align:left; font-weight:bold; padding:4px 2px; font-size:0.85rem; }}
   table.cmp-table th, table.cmp-table td {{ border:1px solid #ccc; padding:4px 8px; text-align:center; }}
-  table.cmp-table th {{ background:#e9edf2; position:sticky; top:0; }}
+  table.cmp-table th {{ background:#e9edf2; }}
   th.sub-hdr {{ font-weight:normal; font-size:0.78rem; }}
   .sticky-col {{ position:sticky; left:0; background:#f5f6f8; z-index:2; font-weight:bold; }}
   tr th.sticky-col {{ z-index:3; }}
@@ -233,8 +332,10 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <span style="background:#ffe6c2;">橘底表頭 = 同報時效/內容被事後修改</span>
   <span style="color:#c00;">紅字 = 與前一報相比預報上修</span>
   <span style="color:#06c;">藍字 = 與前一報相比預報下修</span>
-  <span style="background:#eef4d8;">觀測雨量欄 = 依事件經過天數自動挑選對應累積時段的實測值</span>
+  <span style="background:#eef4d8;">觀測雨量欄 = 依區塊時效自動挑選累積時段，時效結束後定案凍結</span>
 </div>
+<p class="muted">說明：氣象署變更「總雨量預測時效區間」時會自動另開一個區塊（見下方橫向排列的表格），
+舊區塊不再新增預報報次，但觀測雨量會持續更新直到該區塊時效結束為止，屆時定案不再變動。</p>
 {event_sections}
 <footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。（24小時雨量預測資料持續存檔，暫未於本頁顯示）</footer>
 </body>
@@ -257,7 +358,7 @@ def build():
         if not snapshots:
             continue
         sections.append(f"<h2>{event_name}</h2>")
-        sections.append(_render_table(snapshots, "all_precip", "總雨量預測",
+        sections.append(_render_event(event_dir, snapshots, "all_precip", "總雨量預測",
                                        countymax_data, now))
 
     if not sections:
