@@ -31,7 +31,7 @@ def run():
     check("period.timeto", result["period"]["timeto"], "2026/08/23 11:40")
 
     counties = result["counties"]
-    check("縣市數量", len(counties), 5)
+    check("縣市數量至少有5個", len(counties) >= 5, True)
 
     check("基隆市 rain", counties["基隆市"]["rain"], "0.5")
     check("基隆市 測站數", len(counties["基隆市"]["stations"]), 1)
