@@ -31,6 +31,7 @@ def fetch_and_store() -> dict:
 
     all_durations = {}
     errors = {}
+    raw_html_debug = {}
     for n, label in COUNTYMAX_LABELS.items():
         url = COUNTYMAX_URL_TMPL.format(n=n) + f"?_={int(now.timestamp() * 1000)}"
         try:
@@ -38,8 +39,17 @@ def fetch_and_store() -> dict:
             resp.raise_for_status()
             resp.encoding = "utf-8"
             all_durations[label] = parse_countymax_html(resp.text)
+            raw_html_debug[label] = resp.text
         except Exception as e:  # noqa: BLE001 - 排程腳本，單一時段失敗不該中斷整支程式
             errors[label] = str(e)
+
+    # 除錯用：暫時把「最近1小時」這個時段的原始HTML也存下來，方便確認表格真實結構
+    # （解析邏輯確認沒問題後，這段可以拿掉）
+    debug_dir = os.path.join(COUNTYMAX_DATA_DIR, "raw_debug")
+    os.makedirs(debug_dir, exist_ok=True)
+    if "最近1小時" in raw_html_debug:
+        with open(os.path.join(debug_dir, "countymax_0_raw.html"), "w", encoding="utf-8") as f:
+            f.write(raw_html_debug["最近1小時"])
 
     snapshot = {
         "fetched_at": _now_str(),
