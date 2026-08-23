@@ -108,7 +108,7 @@ def _render_countymax():
     counties = []
     seen = set()
     for lab in labels:
-        for c in durations[lab]:
+        for c in durations[lab].get("counties", {}):
             if c not in seen:
                 counties.append(c)
                 seen.add(c)
@@ -117,12 +117,15 @@ def _render_countymax():
             "<div class='table-scroll'><table class='cmp-table'>"]
     html.append("<thead><tr><th class='sticky-col'>縣市</th>")
     for lab in labels:
-        html.append(f"<th>{lab}</th>")
+        tf = durations[lab].get("period", {}).get("timefrom", "")
+        tt = durations[lab].get("period", {}).get("timeto", "")
+        sub = f"<br><span class='period'>{tf}~{tt}</span>" if tf else ""
+        html.append(f"<th>{lab}{sub}</th>")
     html.append("</tr></thead><tbody>")
     for county in counties:
         html.append(f"<tr><td class='sticky-col'>{county}</td>")
         for lab in labels:
-            rec = durations[lab].get(county, {})
+            rec = durations[lab].get("counties", {}).get(county, {})
             rain = rec.get("rain")
             html.append(f"<td>{rain if rain is not None else '-'}</td>")
         html.append("</tr>")
