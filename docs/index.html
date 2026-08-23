@@ -10,10 +10,12 @@
   h2 { margin-top: 2.5rem; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
   h3 { margin-top: 1.5rem; }
   .muted { color:#777; font-size:0.85rem; }
-  .table-scroll { overflow-x:auto; max-width:100%; }
+  .blocks-row { display:flex; gap:16px; overflow-x:auto; align-items:flex-start; padding-bottom:8px; }
+  .block-card { flex:0 0 auto; }
   table.cmp-table { border-collapse: collapse; font-size:0.82rem; white-space:nowrap; }
+  table.cmp-table caption { text-align:left; font-weight:bold; padding:4px 2px; font-size:0.85rem; }
   table.cmp-table th, table.cmp-table td { border:1px solid #ccc; padding:4px 8px; text-align:center; }
-  table.cmp-table th { background:#e9edf2; position:sticky; top:0; }
+  table.cmp-table th { background:#e9edf2; }
   th.sub-hdr { font-weight:normal; font-size:0.78rem; }
   .sticky-col { position:sticky; left:0; background:#f5f6f8; z-index:2; font-weight:bold; }
   tr th.sticky-col { z-index:3; }
@@ -31,26 +33,29 @@
 </head>
 <body>
 <h1>颱風/豪雨事件 雨量預報歷次報次比對</h1>
-<p class="muted">產生時間：2026-08-23 21:22:38（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
+<p class="muted">產生時間：2026-08-23 21:33:10（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
 <div class="legend">
   <span style="background:#e9edf2;">灰底表頭 = 首筆快照</span>
   <span style="background:#d6e8ff;">藍底表頭 = 新一報</span>
   <span style="background:#ffe6c2;">橘底表頭 = 同報時效/內容被事後修改</span>
   <span style="color:#c00;">紅字 = 與前一報相比預報上修</span>
   <span style="color:#06c;">藍字 = 與前一報相比預報下修</span>
-  <span style="background:#eef4d8;">觀測雨量欄 = 依事件經過天數自動挑選對應累積時段的實測值</span>
+  <span style="background:#eef4d8;">觀測雨量欄 = 依區塊時效自動挑選累積時段，時效結束後定案凍結</span>
 </div>
+<p class="muted">說明：氣象署變更「總雨量預測時效區間」時會自動另開一個區塊（見下方橫向排列的表格），
+舊區塊不再新增預報報次，但觀測雨量會持續更新直到該區塊時效結束為止，屆時定案不再變動。</p>
 <h2>0822低壓帶及西南風豪雨事件各地區總雨量預測</h2>
 <h3>總雨量預測</h3>
-<div class="table-scroll"><table class="cmp-table">
+<div class="blocks-row">
+<div class="block-card"><table class="cmp-table">
+<caption>自08月23日00時至8月25日24時止</caption>
 <tr><th class='sticky-col' rowspan='2'>分區</th>
-<th class='hdr-first' colspan='2'>發布時間：115年08月23日10時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new' colspan='2'>發布時間：115年08月23日13時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new' colspan='2'>發布時間：115年08月23日16時00分(正報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-new' colspan='2'>發布時間：115年08月23日19時00分(加報)<br><span class='period'>自08月23日00時至8月25日24時止</span></th>
-<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(本日累積)<br><span class='period'>2026/08/23 00:00~2026/08/23 21:00</span></span></th>
-</tr>
-<tr>
+<th class='hdr-first' colspan='2'>發布時間：115年08月23日10時00分(正報)</th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日13時00分(加報)</th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日16時00分(正報)</th>
+<th class='hdr-new' colspan='2'>發布時間：115年08月23日19時00分(加報)</th>
+<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(本日累積)（更新中）<br><span class='period'>2026/08/23 00:00~2026/08/23 21:10</span></span></th>
+</tr><tr>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
@@ -164,7 +169,7 @@
 <td class=''>300 - 500</td>
 <td class=''>100 - 200</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>33.0</td>
+<td class='obs-col'>33.5</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
 <td class=''>150 - 300</td>
@@ -175,7 +180,7 @@
 <td class=''>200 - 350</td>
 <td class=''>150 - 300</td>
 <td class=''>200 - 350</td>
-<td class='obs-col'>65.5</td>
+<td class='obs-col'>66.0</td>
 </tr>
 <tr><td class='sticky-col'>嘉義市</td>
 <td class=''>150 - 300</td>
@@ -186,7 +191,7 @@
 <td class=''>-</td>
 <td class=''>150 - 300</td>
 <td class=''>-</td>
-<td class='obs-col'>81.0</td>
+<td class='obs-col'>85.0</td>
 </tr>
 <tr><td class='sticky-col'>嘉義縣</td>
 <td class=''>300 - 500</td>
@@ -197,7 +202,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>176.5</td>
+<td class='obs-col'>180.0</td>
 </tr>
 <tr><td class='sticky-col'>臺南市</td>
 <td class=''>300 - 500</td>
@@ -208,7 +213,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>353.0</td>
+<td class='obs-col'>357.0</td>
 </tr>
 <tr><td class='sticky-col'>高雄市</td>
 <td class=''>400 - 600</td>
@@ -219,7 +224,7 @@
 <td class=''>500 - 700</td>
 <td class=''>400 - 600</td>
 <td class=''>500 - 700</td>
-<td class='obs-col'>521.5</td>
+<td class='obs-col'>523.0</td>
 </tr>
 <tr><td class='sticky-col'>屏東縣</td>
 <td class=''>500 - 700</td>
@@ -230,7 +235,7 @@
 <td class=''>500 - 800</td>
 <td class=''>500 - 700</td>
 <td class=''>500 - 800</td>
-<td class='obs-col'>358.0</td>
+<td class='obs-col'>363.0</td>
 </tr>
 <tr><td class='sticky-col'>恆春半島</td>
 <td class=''>400 - 600</td>
@@ -263,7 +268,7 @@
 <td class=''>400 - 600</td>
 <td class=''>300 - 500</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>126.0</td>
+<td class='obs-col'>126.5</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
 <td class=''>400 - 600</td>
@@ -274,7 +279,7 @@
 <td class=''>400 - 600</td>
 <td class=''>400 - 600</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>213.0</td>
+<td class='obs-col'>213.5</td>
 </tr>
 <tr><td class='sticky-col'>蘭嶼綠島</td>
 <td class=''>150 - 300</td>
@@ -296,7 +301,7 @@
 <td class=''>-</td>
 <td class=''>50 - 100</td>
 <td class=''>-</td>
-<td class='obs-col'>8.5</td>
+<td class='obs-col'>9.0</td>
 </tr>
 <tr><td class='sticky-col'>金門縣</td>
 <td class=''>80 - 150</td>
@@ -321,6 +326,7 @@
 <td class='obs-col'>12.5</td>
 </tr>
 </table></div>
+</div>
 <footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。（24小時雨量預測資料持續存檔，暫未於本頁顯示）</footer>
 </body>
 </html>
