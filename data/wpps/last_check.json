@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-08-24 09:21:42",
+  "last_checked_at": "2026-08-24 11:32:08",
   "last_result": {
     "event_name": "0822低壓帶及西南風豪雨事件各地區總雨量預測",
-    "change_type": "no_change",
-    "saved": false,
-    "path": null
+    "change_type": "new_report",
+    "saved": true,
+    "path": "/home/runner/work/wpps-monitor/wpps-monitor/data/wpps/0822低壓帶及西南風豪雨事件各地區總雨量預測/20260824_113208_098773_new_report.json"
   }
 }
