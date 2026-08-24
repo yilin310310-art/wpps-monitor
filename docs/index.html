@@ -10,12 +10,18 @@
   h2 { margin-top: 2.5rem; border-bottom: 2px solid #ccc; padding-bottom: 4px; }
   h3 { margin-top: 1.5rem; }
   .muted { color:#777; font-size:0.85rem; }
-  .toolbar { margin-bottom: 16px; }
+  .toolbar { margin-bottom: 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
   .toolbar button {
     background:#2c6ecb; color:#fff; border:none; border-radius:6px;
     padding:8px 16px; font-size:0.9rem; cursor:pointer;
   }
   .toolbar button:disabled { background:#9ab3d9; cursor:wait; }
+  .event-tabs { margin-bottom: 12px; display:flex; gap:8px; flex-wrap:wrap; }
+  .event-tab {
+    background:#e9edf2; color:#333; border:1px solid #ccc; border-radius:6px;
+    padding:8px 14px; font-size:0.88rem; cursor:pointer;
+  }
+  .event-tab.active { background:#2c6ecb; color:#fff; border-color:#2c6ecb; font-weight:bold; }
   .blocks-row { display:flex; gap:16px; overflow-x:auto; align-items:flex-start; padding-bottom:8px; }
   .block-card { flex:0 0 auto; }
   table.cmp-table { border-collapse: collapse; font-size:0.82rem; white-space:nowrap; }
@@ -43,7 +49,7 @@
 </div>
 <div id="capture-area">
 <h1>颱風/豪雨事件 雨量預報歷次報次比對</h1>
-<p class="muted">產生時間：2026-08-24 18:22:05（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
+<p class="muted">產生時間：2026-08-24 18:48:54（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
 <div class="legend">
   <span style="background:#e9edf2;">灰底表頭 = 首筆快照</span>
   <span style="background:#d6e8ff;">藍底表頭 = 新一報</span>
@@ -54,8 +60,10 @@
 </div>
 <p class="muted">說明：氣象署變更「總雨量預測時效區間」時會自動另開一個區塊（見下方橫向排列的表格），
 舊區塊不再新增預報報次，但觀測雨量會持續更新直到該區塊時效結束為止，屆時定案不再變動。</p>
-<h2>0822低壓帶及西南風豪雨事件各地區總雨量預測</h2>
-<h3>總雨量預測</h3>
+<div class="event-tabs">
+<button class='event-tab active' data-target='event-0822低壓帶及西南風豪雨事件各地區總雨量預測' onclick="showEvent('0822低壓帶及西南風豪雨事件各地區總雨量預測')">0822低壓帶及西南風豪雨事件各地區總雨量預測</button>
+</div>
+<div class='event-section' id='event-0822低壓帶及西南風豪雨事件各地區總雨量預測' style='display:block;'><h2>0822低壓帶及西南風豪雨事件各地區總雨量預測</h2><h3>總雨量預測</h3>
 <div class="blocks-row">
 <div class="block-card"><table class="cmp-table">
 <caption>自08月23日00時至8月25日24時止</caption>
@@ -64,7 +72,7 @@
 <th class='hdr-new' colspan='2'>115年08月23日13時00分</th>
 <th class='hdr-new' colspan='2'>115年08月23日16時00分</th>
 <th class='hdr-new' colspan='2'>115年08月23日19時00分</th>
-<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(2日累積)（更新中）<br><span class='period'>2026/08/23 00:00~2026/08/24 18:00</span></span></th>
+<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(2日累積)（更新中）<br><span class='period'>2026/08/23 00:00~2026/08/24 18:40</span></span></th>
 </tr><tr>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
@@ -80,7 +88,7 @@
 <td class=''>-</td>
 <td class=''>80 - 150</td>
 <td class=''>-</td>
-<td class='obs-col'>27.5</td>
+<td class='obs-col'>29.0</td>
 </tr>
 <tr><td class='sticky-col'>臺北市</td>
 <td class=''>80 - 150</td>
@@ -91,7 +99,7 @@
 <td class=''>80 - 150</td>
 <td class=''>80 - 150</td>
 <td class=''>80 - 150</td>
-<td class='obs-col'>16.5</td>
+<td class='obs-col'>18.0</td>
 </tr>
 <tr><td class='sticky-col'>新北市</td>
 <td class=''>200 - 300</td>
@@ -102,7 +110,7 @@
 <td class=''>200 - 300</td>
 <td class=''>200 - 300</td>
 <td class=''>200 - 300</td>
-<td class='obs-col'>70.0</td>
+<td class='obs-col'>71.5</td>
 </tr>
 <tr><td class='sticky-col'>桃園市</td>
 <td class=''>80 - 150</td>
@@ -113,7 +121,7 @@
 <td class=''>150 - 250</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 250</td>
-<td class='obs-col'>46.0</td>
+<td class='obs-col'>48.0</td>
 </tr>
 <tr><td class='sticky-col'>新竹市</td>
 <td class=''>80 - 150</td>
@@ -124,7 +132,7 @@
 <td class=''>-</td>
 <td class=''>80 - 150</td>
 <td class=''>-</td>
-<td class='obs-col'>43.0</td>
+<td class='obs-col'>44.5</td>
 </tr>
 <tr><td class='sticky-col'>新竹縣</td>
 <td class=''>80 - 150</td>
@@ -135,7 +143,7 @@
 <td class=''>150 - 250</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 250</td>
-<td class='obs-col'>63.5</td>
+<td class='obs-col'>66.0</td>
 </tr>
 <tr><td class='sticky-col'>苗栗縣</td>
 <td class=''>80 - 150</td>
@@ -146,7 +154,7 @@
 <td class=''>150 - 250</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 250</td>
-<td class='obs-col'>63.5</td>
+<td class='obs-col'>64.0</td>
 </tr>
 <tr><td class='sticky-col'>臺中市</td>
 <td class=''>100 - 200</td>
@@ -157,7 +165,7 @@
 <td class=''>200 - 400</td>
 <td class=''>100 - 200</td>
 <td class=''>200 - 400</td>
-<td class='obs-col'>335.5</td>
+<td class='obs-col'>345.5</td>
 </tr>
 <tr><td class='sticky-col'>彰化縣</td>
 <td class=''>100 - 200</td>
@@ -179,7 +187,7 @@
 <td class=''>300 - 500</td>
 <td class=''>100 - 200</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>222.5</td>
+<td class='obs-col'>226.5</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
 <td class=''>150 - 300</td>
@@ -212,7 +220,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>379.0</td>
+<td class='obs-col'>381.0</td>
 </tr>
 <tr><td class='sticky-col'>臺南市</td>
 <td class=''>300 - 500</td>
@@ -267,7 +275,7 @@
 <td class=''>300 - 500</td>
 <td class=''>200 - 350</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>160.5</td>
+<td class='obs-col'>162.0</td>
 </tr>
 <tr><td class='sticky-col'>花蓮縣</td>
 <td class=''>300 - 500</td>
@@ -278,7 +286,7 @@
 <td class=''>400 - 600</td>
 <td class=''>300 - 500</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>532.0</td>
+<td class='obs-col'>533.0</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
 <td class=''>400 - 600</td>
@@ -322,7 +330,7 @@
 <td class=''>-</td>
 <td class=''>80 - 150</td>
 <td class=''>-</td>
-<td class='obs-col'>91.0</td>
+<td class='obs-col'>94.0</td>
 </tr>
 <tr><td class='sticky-col'>澎湖縣</td>
 <td class=''>150 - 300</td>
@@ -346,8 +354,10 @@
 <th class='hdr-new' colspan='2'>115年08月24日10時00分</th>
 <th class='hdr-new' colspan='2'>115年08月24日13時00分</th>
 <th class='hdr-new' colspan='2'>115年08月24日16時00分</th>
-<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(本日累積)（更新中）<br><span class='period'>2026/08/24 00:00~2026/08/24 18:00</span></span></th>
+<th class='hdr-new' colspan='2'>115年08月24日19時00分</th>
+<th class='hdr-observed' rowspan='2'>觀測雨量<br><span class='period'>(本日累積)（更新中）<br><span class='period'>2026/08/24 00:00~2026/08/24 18:40</span></span></th>
 </tr><tr>
+<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
 <th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>
@@ -371,7 +381,9 @@
 <td class=''>-</td>
 <td class=''>50 - 100</td>
 <td class=''>-</td>
-<td class='obs-col'>13.0</td>
+<td class=''>50 - 100</td>
+<td class=''>-</td>
+<td class='obs-col'>14.0</td>
 </tr>
 <tr><td class='sticky-col'>臺北市</td>
 <td class=''>50 - 100</td>
@@ -388,7 +400,9 @@
 <td class=''>50 - 100</td>
 <td class=''>50 - 100</td>
 <td class=''>50 - 100</td>
-<td class='obs-col'>12.5</td>
+<td class=''>50 - 100</td>
+<td class=''>50 - 100</td>
+<td class='obs-col'>14.0</td>
 </tr>
 <tr><td class='sticky-col'>新北市</td>
 <td class=''>100 - 200</td>
@@ -405,7 +419,9 @@
 <td class=''>150 - 250</td>
 <td class=''>100 - 200</td>
 <td class=''>150 - 250</td>
-<td class='obs-col'>53.0</td>
+<td class=''>100 - 200</td>
+<td class=''>150 - 250</td>
+<td class='obs-col'>54.0</td>
 </tr>
 <tr><td class='sticky-col'>桃園市</td>
 <td class=''>< 80</td>
@@ -422,7 +438,9 @@
 <td class=''>100 - 200</td>
 <td class=''>< 80</td>
 <td class=''>100 - 200</td>
-<td class='obs-col'>37.0</td>
+<td class=''>< 80</td>
+<td class=''>100 - 200</td>
+<td class='obs-col'>39.0</td>
 </tr>
 <tr><td class='sticky-col'>新竹市</td>
 <td class=''>< 80</td>
@@ -439,7 +457,9 @@
 <td class=''>-</td>
 <td class=''>< 80</td>
 <td class=''>-</td>
-<td class='obs-col'>42.5</td>
+<td class=''>< 80</td>
+<td class=''>-</td>
+<td class='obs-col'>44.0</td>
 </tr>
 <tr><td class='sticky-col'>新竹縣</td>
 <td class=''>< 80</td>
@@ -456,7 +476,9 @@
 <td class=''>100 - 200</td>
 <td class=''>< 80</td>
 <td class=''>100 - 200</td>
-<td class='obs-col'>50.0</td>
+<td class=''>< 80</td>
+<td class=''>100 - 200</td>
+<td class='obs-col'>52.5</td>
 </tr>
 <tr><td class='sticky-col'>苗栗縣</td>
 <td class=''>< 80</td>
@@ -473,7 +495,9 @@
 <td class=''>100 - 200</td>
 <td class=''>< 80</td>
 <td class=''>100 - 200</td>
-<td class='obs-col'>27.0</td>
+<td class=''>< 80</td>
+<td class=''>100 - 200</td>
+<td class='obs-col'>31.0</td>
 </tr>
 <tr><td class='sticky-col'>臺中市</td>
 <td class=''>80 - 150</td>
@@ -490,9 +514,13 @@
 <td class=''>150 - 300</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 300</td>
-<td class='obs-col'>241.5</td>
+<td class=''>80 - 150</td>
+<td class=''>150 - 300</td>
+<td class='obs-col'>251.5</td>
 </tr>
 <tr><td class='sticky-col'>彰化縣</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
 <td class=''>100 - 200</td>
@@ -524,9 +552,13 @@
 <td class=''>200 - 350</td>
 <td class=''>100 - 200</td>
 <td class=''>200 - 350</td>
-<td class='obs-col'>176.5</td>
+<td class=''>100 - 200</td>
+<td class=''>200 - 350</td>
+<td class='obs-col'>180.5</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
+<td class=''>150 - 250</td>
+<td class=''>150 - 250</td>
 <td class=''>150 - 250</td>
 <td class=''>150 - 250</td>
 <td class=''>150 - 250</td>
@@ -558,9 +590,13 @@
 <td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
 <td class='obs-col'>119.5</td>
 </tr>
 <tr><td class='sticky-col'>嘉義縣</td>
+<td class=''>200 - 350</td>
+<td class=''>200 - 350</td>
 <td class=''>200 - 350</td>
 <td class=''>200 - 350</td>
 <td class=''>200 - 350</td>
@@ -592,7 +628,9 @@
 <td class=''>250 - 400</td>
 <td class=''>300 - 500</td>
 <td class=''>250 - 400</td>
-<td class='obs-col'>237.5</td>
+<td class=''>300 - 500</td>
+<td class=''>250 - 400</td>
+<td class='obs-col'>243.5</td>
 </tr>
 <tr><td class='sticky-col'>高雄市</td>
 <td class=''>300 - 500</td>
@@ -609,9 +647,13 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>228.0</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>234.5</td>
 </tr>
 <tr><td class='sticky-col'>屏東縣</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
@@ -643,6 +685,8 @@
 <td class=''>-</td>
 <td class=''>250 - 400</td>
 <td class=''>-</td>
+<td class=''>250 - 400</td>
+<td class=''>-</td>
 <td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>宜蘭縣</td>
@@ -660,7 +704,9 @@
 <td class=''>300 - 500</td>
 <td class=''>200 - 350</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>113.0</td>
+<td class=''>200 - 350</td>
+<td class=''>300 - 500</td>
+<td class='obs-col'>123.0</td>
 </tr>
 <tr><td class='sticky-col'>花蓮縣</td>
 <td class=''>300 - 500</td>
@@ -677,9 +723,13 @@
 <td class=''>400 - 600</td>
 <td class=''>300 - 500</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>405.0</td>
+<td class=''>300 - 500</td>
+<td class=''>400 - 600</td>
+<td class='obs-col'>406.0</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
+<td class=''>300 - 500</td>
+<td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
@@ -711,9 +761,13 @@
 <td class=''>-</td>
 <td class=''>150 - 250</td>
 <td class=''>-</td>
+<td class=''>150 - 250</td>
+<td class=''>-</td>
 <td class='obs-col'>-</td>
 </tr>
 <tr><td class='sticky-col'>連江縣</td>
+<td class=''>< 80</td>
+<td class=''>-</td>
 <td class=''>< 80</td>
 <td class=''>-</td>
 <td class=''>< 80</td>
@@ -745,9 +799,13 @@
 <td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
-<td class='obs-col'>90.5</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
+<td class='obs-col'>93.5</td>
 </tr>
 <tr><td class='sticky-col'>澎湖縣</td>
+<td class=''>100 - 200</td>
+<td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
 <td class=''>100 - 200</td>
@@ -765,11 +823,20 @@
 <td class='obs-col'>43.0</td>
 </tr>
 </table></div>
-</div>
+</div></div>
 <footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。（24小時雨量預測資料持續存檔，暫未於本頁顯示）</footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
+function showEvent(slug) {
+  document.querySelectorAll('.event-section').forEach(el => { el.style.display = 'none'; });
+  const target = document.getElementById('event-' + slug);
+  if (target) target.style.display = 'block';
+  document.querySelectorAll('.event-tab').forEach(el => { el.classList.remove('active'); });
+  const btn = document.querySelector(`[data-target="event-${slug}"]`);
+  if (btn) btn.classList.add('active');
+}
+
 async function downloadAsImage() {
   const btn = document.getElementById('downloadBtn');
   const originalText = btn.textContent;
@@ -816,7 +883,9 @@ async function downloadAsImage() {
     });
     const link = document.createElement('a');
     const ts = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
-    link.download = `雨量預報比對_${ts}.png`;
+    const activeTab = document.querySelector('.event-tab.active');
+    const eventLabel = activeTab ? activeTab.textContent.trim() : '雨量預報比對';
+    link.download = `${eventLabel}_${ts}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   } catch (err) {
