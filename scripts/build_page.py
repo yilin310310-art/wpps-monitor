@@ -208,6 +208,15 @@ def _get_observed_for_block(period_text, now, countymax_data, frozen_store, is_l
     return counties, label, range_text, False
 
 
+def _clean_publish_time(text):
+    """把 '發布時間：115年08月23日19時00分(加報)' 簡化成 '115年08月23日19時00分'"""
+    if not text:
+        return text
+    text = text.replace("發布時間：", "").strip()
+    text = re.sub(r"[（(][^）)]*[）)]\s*$", "", text).strip()
+    return text
+
+
 def _render_block(block, table_key, countymax_data, now, frozen_store, is_latest_block):
     period_text = block["period"]
     snapshots = block["snapshots"]
@@ -230,7 +239,7 @@ def _render_block(block, table_key, countymax_data, now, frozen_store, is_latest
     html.append("<tr><th class='sticky-col' rowspan='2'>分區</th>")
     for snap in snapshots:
         tbl = snap.get(table_key) or {}
-        pub = tbl.get("publish_time", "")
+        pub = _clean_publish_time(tbl.get("publish_time", ""))
         cls = _report_header_class(snap)
         html.append(f"<th class='{cls}' colspan='2'>{pub}</th>")
     obs_sub = f"<br><span class='period'>{observed_range}</span>" if observed_range else ""
