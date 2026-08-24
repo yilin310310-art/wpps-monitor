@@ -373,6 +373,13 @@ async function downloadAsImage() {{
   }});
   document.body.appendChild(clone);
 
+  // 截圖用的複製品沒有捲動環境，sticky定位在這裡會失控（跑到最右邊、擠壓其他欄寬），
+  // 截圖前先把它們改成普通定位，只影響這份複製品，不影響原本網頁的捲動效果
+  clone.querySelectorAll('.sticky-col').forEach(el => {{
+    el.style.position = 'static';
+    el.style.left = 'auto';
+  }});
+
   // 強制瀏覽器重新計算版面，確保接下來讀到的是展開後的真實寬高
   void clone.offsetHeight;
   const fullWidth = clone.scrollWidth;
