@@ -43,7 +43,7 @@
 </div>
 <div id="capture-area">
 <h1>颱風/豪雨事件 雨量預報歷次報次比對</h1>
-<p class="muted">產生時間：2026-08-24 09:13:05（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
+<p class="muted">產生時間：2026-08-24 09:21:46（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
 <div class="legend">
   <span style="background:#e9edf2;">灰底表頭 = 首筆快照</span>
   <span style="background:#d6e8ff;">藍底表頭 = 新一報</span>
@@ -381,7 +381,7 @@
 <td class=''>150 - 250</td>
 <td class=''>100 - 200</td>
 <td class=''>150 - 250</td>
-<td class='obs-col'>19.0</td>
+<td class='obs-col'>19.5</td>
 </tr>
 <tr><td class='sticky-col'>桃園市</td>
 <td class=''>< 80</td>
@@ -425,7 +425,7 @@
 <td class=''>100 - 200</td>
 <td class=''>< 80</td>
 <td class=''>100 - 200</td>
-<td class='obs-col'>7.5</td>
+<td class='obs-col'>8.0</td>
 </tr>
 <tr><td class='sticky-col'>臺中市</td>
 <td class=''>80 - 150</td>
@@ -436,7 +436,7 @@
 <td class=''>150 - 300</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 300</td>
-<td class='obs-col'>81.0</td>
+<td class='obs-col'>82.5</td>
 </tr>
 <tr><td class='sticky-col'>彰化縣</td>
 <td class=''>100 - 200</td>
@@ -458,7 +458,7 @@
 <td class=''>200 - 350</td>
 <td class=''>100 - 200</td>
 <td class=''>200 - 350</td>
-<td class='obs-col'>110.5</td>
+<td class='obs-col'>112.0</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
 <td class=''>150 - 250</td>
@@ -524,7 +524,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>203.0</td>
+<td class='obs-col'>208.0</td>
 </tr>
 <tr><td class='sticky-col'>恆春半島</td>
 <td class=''>250 - 400</td>
@@ -557,7 +557,7 @@
 <td class=''>400 - 600</td>
 <td class=''>300 - 500</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>299.5</td>
+<td class='obs-col'>301.0</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
 <td class=''>300 - 500</td>
@@ -568,7 +568,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>297.5</td>
+<td class='obs-col'>303.5</td>
 </tr>
 <tr><td class='sticky-col'>蘭嶼綠島</td>
 <td class=''>150 - 250</td>
@@ -641,6 +641,13 @@ async function downloadAsImage() {
     el.style.display = 'inline-flex';
   });
   document.body.appendChild(clone);
+
+  // 截圖用的複製品沒有捲動環境，sticky定位在這裡會失控（跑到最右邊、擠壓其他欄寬），
+  // 截圖前先把它們改成普通定位，只影響這份複製品，不影響原本網頁的捲動效果
+  clone.querySelectorAll('.sticky-col').forEach(el => {
+    el.style.position = 'static';
+    el.style.left = 'auto';
+  });
 
   // 強制瀏覽器重新計算版面，確保接下來讀到的是展開後的真實寬高
   void clone.offsetHeight;
