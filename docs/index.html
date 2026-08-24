@@ -43,7 +43,7 @@
 </div>
 <div id="capture-area">
 <h1>颱風/豪雨事件 雨量預報歷次報次比對</h1>
-<p class="muted">產生時間：2026-08-24 08:58:23（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
+<p class="muted">產生時間：2026-08-24 09:05:40（每10分鐘自動更新，資料來源：交通部中央氣象署）</p>
 <div class="legend">
   <span style="background:#e9edf2;">灰底表頭 = 首筆快照</span>
   <span style="background:#d6e8ff;">藍底表頭 = 新一報</span>
@@ -436,7 +436,7 @@
 <td class=''>150 - 300</td>
 <td class=''>80 - 150</td>
 <td class=''>150 - 300</td>
-<td class='obs-col'>78.5</td>
+<td class='obs-col'>81.0</td>
 </tr>
 <tr><td class='sticky-col'>彰化縣</td>
 <td class=''>100 - 200</td>
@@ -447,7 +447,7 @@
 <td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
-<td class='obs-col'>72.0</td>
+<td class='obs-col'>72.5</td>
 </tr>
 <tr><td class='sticky-col'>南投縣</td>
 <td class=''>100 - 200</td>
@@ -458,7 +458,7 @@
 <td class=''>200 - 350</td>
 <td class=''>100 - 200</td>
 <td class=''>200 - 350</td>
-<td class='obs-col'>109.0</td>
+<td class='obs-col'>109.5</td>
 </tr>
 <tr><td class='sticky-col'>雲林縣</td>
 <td class=''>150 - 250</td>
@@ -480,7 +480,7 @@
 <td class=''>-</td>
 <td class=''>100 - 200</td>
 <td class=''>-</td>
-<td class='obs-col'>115.0</td>
+<td class='obs-col'>116.0</td>
 </tr>
 <tr><td class='sticky-col'>嘉義縣</td>
 <td class=''>200 - 350</td>
@@ -513,7 +513,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>158.0</td>
+<td class='obs-col'>160.0</td>
 </tr>
 <tr><td class='sticky-col'>屏東縣</td>
 <td class=''>300 - 500</td>
@@ -546,7 +546,7 @@
 <td class=''>300 - 500</td>
 <td class=''>200 - 350</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>42.0</td>
+<td class='obs-col'>42.5</td>
 </tr>
 <tr><td class='sticky-col'>花蓮縣</td>
 <td class=''>300 - 500</td>
@@ -557,7 +557,7 @@
 <td class=''>400 - 600</td>
 <td class=''>300 - 500</td>
 <td class=''>400 - 600</td>
-<td class='obs-col'>297.5</td>
+<td class='obs-col'>298.5</td>
 </tr>
 <tr><td class='sticky-col'>臺東縣</td>
 <td class=''>300 - 500</td>
@@ -568,7 +568,7 @@
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
 <td class=''>300 - 500</td>
-<td class='obs-col'>286.0</td>
+<td class='obs-col'>295.5</td>
 </tr>
 <tr><td class='sticky-col'>蘭嶼綠島</td>
 <td class=''>150 - 250</td>
@@ -635,12 +635,27 @@ async function downloadAsImage() {
     el.style.width = 'max-content';
   });
 
+  const target = document.getElementById('capture-area');
+  const originalTargetStyle = target.style.cssText;
+  target.style.width = 'max-content';
+  target.style.overflow = 'visible';
+  const originalBodyOverflow = document.body.style.overflow;
+  document.body.style.overflow = 'visible';
+
+  // 強制瀏覽器重新計算版面，確保下面讀到的是「展開後」的真實寬高
+  void target.offsetHeight;
+  const fullWidth = target.scrollWidth;
+  const fullHeight = target.scrollHeight;
+
   try {
-    const target = document.getElementById('capture-area');
     const canvas = await html2canvas(target, {
       backgroundColor: '#f5f6f8',
       scale: 2,
       useCORS: true,
+      width: fullWidth,
+      height: fullHeight,
+      windowWidth: fullWidth,
+      windowHeight: fullHeight,
     });
     const link = document.createElement('a');
     const ts = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
@@ -651,6 +666,8 @@ async function downloadAsImage() {
     alert('產生圖片失敗，請改用瀏覽器內建的截圖功能：' + err.message);
   } finally {
     scrollers.forEach((el, i) => { el.style.cssText = originalStyles[i]; });
+    target.style.cssText = originalTargetStyle;
+    document.body.style.overflow = originalBodyOverflow;
     btn.disabled = false;
     btn.textContent = originalText;
   }
