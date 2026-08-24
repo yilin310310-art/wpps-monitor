@@ -311,12 +311,18 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   h2 {{ margin-top: 2.5rem; border-bottom: 2px solid #ccc; padding-bottom: 4px; }}
   h3 {{ margin-top: 1.5rem; }}
   .muted {{ color:#777; font-size:0.85rem; }}
-  .toolbar {{ margin-bottom: 16px; }}
+  .toolbar {{ margin-bottom: 16px; display:flex; gap:10px; align-items:center; flex-wrap:wrap; }}
   .toolbar button {{
     background:#2c6ecb; color:#fff; border:none; border-radius:6px;
     padding:8px 16px; font-size:0.9rem; cursor:pointer;
   }}
   .toolbar button:disabled {{ background:#9ab3d9; cursor:wait; }}
+  .event-tabs {{ margin-bottom: 12px; display:flex; gap:8px; flex-wrap:wrap; }}
+  .event-tab {{
+    background:#e9edf2; color:#333; border:1px solid #ccc; border-radius:6px;
+    padding:8px 14px; font-size:0.88rem; cursor:pointer;
+  }}
+  .event-tab.active {{ background:#2c6ecb; color:#fff; border-color:#2c6ecb; font-weight:bold; }}
   .blocks-row {{ display:flex; gap:16px; overflow-x:auto; align-items:flex-start; padding-bottom:8px; }}
   .block-card {{ flex:0 0 auto; }}
   table.cmp-table {{ border-collapse: collapse; font-size:0.82rem; white-space:nowrap; }}
@@ -355,11 +361,23 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 </div>
 <p class="muted">說明：氣象署變更「總雨量預測時效區間」時會自動另開一個區塊（見下方橫向排列的表格），
 舊區塊不再新增預報報次，但觀測雨量會持續更新直到該區塊時效結束為止，屆時定案不再變動。</p>
+<div class="event-tabs">
+{event_tabs}
+</div>
 {event_sections}
 <footer>本頁為自動化擷取結果，僅供內部情資參考，正式資料請以中央氣象署官方發布為準。（24小時雨量預測資料持續存檔，暫未於本頁顯示）</footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
+function showEvent(slug) {{
+  document.querySelectorAll('.event-section').forEach(el => {{ el.style.display = 'none'; }});
+  const target = document.getElementById('event-' + slug);
+  if (target) target.style.display = 'block';
+  document.querySelectorAll('.event-tab').forEach(el => {{ el.classList.remove('active'); }});
+  const btn = document.querySelector(`[data-target="event-${{slug}}"]`);
+  if (btn) btn.classList.add('active');
+}}
+
 async function downloadAsImage() {{
   const btn = document.getElementById('downloadBtn');
   const originalText = btn.textContent;
@@ -406,7 +424,9 @@ async function downloadAsImage() {{
     }});
     const link = document.createElement('a');
     const ts = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
-    link.download = `雨量預報比對_${{ts}}.png`;
+    const activeTab = document.querySelector('.event-tab.active');
+    const eventLabel = activeTab ? activeTab.textContent.trim() : '雨量預報比對';
+    link.download = `${{eventLabel}}_${{ts}}.png`;
     link.href = canvas.toDataURL('image/png');
     link.click();
   }} catch (err) {{
@@ -431,22 +451,47 @@ def build():
     now = datetime.now(TW_TZ)
     countymax_data = _load_countymax_latest()
 
-    sections = []
+    # 先把每個事件的資料準備好，並依「最後一筆快照時間」排序，最新的事件排最前面
+    events = []
     for event_dir in event_dirs:
         event_name = os.path.basename(event_dir)
         snapshots = _load_event_snapshots(event_dir)
         if not snapshots:
             continue
-        sections.append(f"<h2>{event_name}</h2>")
-        sections.append(_render_event(event_dir, snapshots, "all_precip", "總雨量預測",
-                                       countymax_data, now))
+        last_fetched = snapshots[-1].get("fetched_at", "")
+        events.append({
+            "slug": event_name,
+            "display_name": (snapshots[-1].get("all_precip") or {}).get("event_name") or event_name,
+            "snapshots": snapshots,
+            "event_dir": event_dir,
+            "last_fetched": last_fetched,
+        })
+    events.sort(key=lambda e: e["last_fetched"], reverse=True)
 
-    if not sections:
-        sections.append("<p>目前沒有進行中的事件資料。</p>")
+    tabs_html = []
+    sections_html = []
+    for i, ev in enumerate(events):
+        active = "active" if i == 0 else ""
+        display = "block" if i == 0 else "none"
+        tabs_html.append(
+            f"<button class='event-tab {active}' data-target='event-{ev['slug']}' "
+            f"onclick=\"showEvent('{ev['slug']}')\">{ev['display_name']}</button>"
+        )
+        body = _render_event(ev["event_dir"], ev["snapshots"], "all_precip", "總雨量預測",
+                              countymax_data, now)
+        sections_html.append(
+            f"<div class='event-section' id='event-{ev['slug']}' style='display:{display};'>"
+            f"<h2>{ev['display_name']}</h2>{body}</div>"
+        )
+
+    if not events:
+        tabs_html.append("<span class='muted'>目前沒有進行中的事件</span>")
+        sections_html.append("<p>目前沒有進行中的事件資料。</p>")
 
     html = PAGE_TEMPLATE.format(
         generated_at=now.strftime("%Y-%m-%d %H:%M:%S"),
-        event_sections="\n".join(sections),
+        event_tabs="\n".join(tabs_html),
+        event_sections="\n".join(sections_html),
     )
 
     out_path = os.path.join(DOCS_DIR, "index.html")
