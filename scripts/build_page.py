@@ -366,12 +366,27 @@ async function downloadAsImage() {{
     el.style.width = 'max-content';
   }});
 
+  const target = document.getElementById('capture-area');
+  const originalTargetStyle = target.style.cssText;
+  target.style.width = 'max-content';
+  target.style.overflow = 'visible';
+  const originalBodyOverflow = document.body.style.overflow;
+  document.body.style.overflow = 'visible';
+
+  // 強制瀏覽器重新計算版面，確保下面讀到的是「展開後」的真實寬高
+  void target.offsetHeight;
+  const fullWidth = target.scrollWidth;
+  const fullHeight = target.scrollHeight;
+
   try {{
-    const target = document.getElementById('capture-area');
     const canvas = await html2canvas(target, {{
       backgroundColor: '#f5f6f8',
       scale: 2,
       useCORS: true,
+      width: fullWidth,
+      height: fullHeight,
+      windowWidth: fullWidth,
+      windowHeight: fullHeight,
     }});
     const link = document.createElement('a');
     const ts = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
@@ -382,6 +397,8 @@ async function downloadAsImage() {{
     alert('產生圖片失敗，請改用瀏覽器內建的截圖功能：' + err.message);
   }} finally {{
     scrollers.forEach((el, i) => {{ el.style.cssText = originalStyles[i]; }});
+    target.style.cssText = originalTargetStyle;
+    document.body.style.overflow = originalBodyOverflow;
     btn.disabled = false;
     btn.textContent = originalText;
   }}
