@@ -357,29 +357,29 @@ async function downloadAsImage() {{
   btn.disabled = true;
   btn.textContent = '產生圖片中...';
 
-  // 暫時讓每個可橫向捲動的區塊完全展開，避免圖片只截到目前看得到的範圍
-  const scrollers = document.querySelectorAll('.blocks-row');
-  const originalStyles = [];
-  scrollers.forEach(el => {{
-    originalStyles.push(el.style.cssText);
+  // 複製一份內容到畫面外，讓它完全不受目前畫面版面/捲動限制地自然展開，
+  // 這樣截圖一定是完整內容，不會受限於目前瀏覽器視窗大小
+  const original = document.getElementById('capture-area');
+  const clone = original.cloneNode(true);
+  clone.id = 'capture-area-clone';
+  clone.style.position = 'absolute';
+  clone.style.left = '-99999px';
+  clone.style.top = '0';
+  clone.style.width = 'max-content';
+  clone.style.display = 'inline-block';
+  clone.querySelectorAll('.blocks-row').forEach(el => {{
     el.style.overflow = 'visible';
-    el.style.width = 'max-content';
+    el.style.display = 'inline-flex';
   }});
+  document.body.appendChild(clone);
 
-  const target = document.getElementById('capture-area');
-  const originalTargetStyle = target.style.cssText;
-  target.style.width = 'max-content';
-  target.style.overflow = 'visible';
-  const originalBodyOverflow = document.body.style.overflow;
-  document.body.style.overflow = 'visible';
-
-  // 強制瀏覽器重新計算版面，確保下面讀到的是「展開後」的真實寬高
-  void target.offsetHeight;
-  const fullWidth = target.scrollWidth;
-  const fullHeight = target.scrollHeight;
+  // 強制瀏覽器重新計算版面，確保接下來讀到的是展開後的真實寬高
+  void clone.offsetHeight;
+  const fullWidth = clone.scrollWidth;
+  const fullHeight = clone.scrollHeight;
 
   try {{
-    const canvas = await html2canvas(target, {{
+    const canvas = await html2canvas(clone, {{
       backgroundColor: '#f5f6f8',
       scale: 2,
       useCORS: true,
@@ -396,9 +396,7 @@ async function downloadAsImage() {{
   }} catch (err) {{
     alert('產生圖片失敗，請改用瀏覽器內建的截圖功能：' + err.message);
   }} finally {{
-    scrollers.forEach((el, i) => {{ el.style.cssText = originalStyles[i]; }});
-    target.style.cssText = originalTargetStyle;
-    document.body.style.overflow = originalBodyOverflow;
+    document.body.removeChild(clone);
     btn.disabled = false;
     btn.textContent = originalText;
   }}
