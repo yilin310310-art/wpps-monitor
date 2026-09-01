@@ -163,37 +163,17 @@ def _save_frozen_store(event_dir, store):
         json.dump(store, f, ensure_ascii=False, indent=2)
 
 
-def _get_observed_for_block(period_text, now, countymax_data, frozen_store, is_latest_block):
+def _get_observed_for_block(period_text, now, countymax_data, frozen_store):
     """
     回傳 (counties_dict, label文字, 觀測時間範圍文字, 是否已凍結)
-    - 最新區塊：一律用動態經過天數挑選，持續更新
-    - 舊區塊：時效還沒結束前一樣動態更新；結束後改用/建立凍結值
+    判斷純粹只看「這個區塊自己的時效有沒有結束」，跟它是不是目前最新的區塊無關：
+    氣象署可能停在最後一報很久都不再更新（例如事件已經結束），這種情況下
+    即使是「最新（唯一）區塊」，時效到了也要照樣凍結，不能一直用現在時間去反推。
     """
-    block_end = _parse_period_end(period_text, now)
     frozen = frozen_store.get(period_text)
-
-    if not is_latest_block and frozen is not None:
+    if frozen is not None:
         return frozen["counties"], frozen["label"], frozen.get("range_text", ""), True
 
-    if not is_latest_block and block_end is not None and now >= block_end:
-        # 時效剛結束，準備凍結：用目前最新一次觀測值定案
-        label = _pick_duration_label((now - _parse_period_start(period_text, now)).days) \
-            if _parse_period_start(period_text, now) else "本日累積"
-        counties = {}
-        range_text = ""
-        if countymax_data:
-            dur = countymax_data.get("durations", {}).get(label, {})
-            counties = dur.get("counties", {})
-            p = dur.get("period", {})
-            if p.get("timefrom"):
-                range_text = f"{p.get('timefrom','')}~{p.get('timeto','')}"
-        frozen_store[period_text] = {
-            "counties": counties, "label": label, "range_text": range_text,
-            "frozen_at": now.strftime("%Y-%m-%d %H:%M:%S"),
-        }
-        return counties, label, range_text, True
-
-    # 動態更新中（最新區塊，或舊區塊時效還沒結束）
     start = _parse_period_start(period_text, now)
     elapsed_days = (now - start).days if start else 0
     label = _pick_duration_label(elapsed_days)
@@ -205,6 +185,16 @@ def _get_observed_for_block(period_text, now, countymax_data, frozen_store, is_l
         p = dur.get("period", {})
         if p.get("timefrom"):
             range_text = f"{p.get('timefrom','')}~{p.get('timeto','')}"
+
+    block_end = _parse_period_end(period_text, now)
+    if block_end is not None and now >= block_end:
+        # 時效剛結束，用目前這次算出來的觀測值定案凍結
+        frozen_store[period_text] = {
+            "counties": counties, "label": label, "range_text": range_text,
+            "frozen_at": now.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+        return counties, label, range_text, True
+
     return counties, label, range_text, False
 
 
@@ -217,7 +207,7 @@ def _clean_publish_time(text):
     return text
 
 
-def _render_block(block, table_key, countymax_data, now, frozen_store, is_latest_block):
+def _render_block(block, table_key, countymax_data, now, frozen_store):
     period_text = block["period"]
     snapshots = block["snapshots"]
 
@@ -230,7 +220,7 @@ def _render_block(block, table_key, countymax_data, now, frozen_store, is_latest
                 seen.add(a)
 
     observed_counties, observed_label, observed_range, is_frozen = _get_observed_for_block(
-        period_text, now, countymax_data, frozen_store, is_latest_block
+        period_text, now, countymax_data, frozen_store
     )
     frozen_tag = "（已定案）" if is_frozen else "（更新中）"
 
@@ -287,9 +277,7 @@ def _render_event(event_dir, snapshots, table_key, title, countymax_data, now):
 
     html = [f"<h3>{title}</h3>", '<div class="blocks-row">']
     for i, block in enumerate(blocks):
-        is_latest = (i == len(blocks) - 1)
-        html.append(_render_block(block, table_key, countymax_data, now,
-                                   frozen_store, is_latest))
+        html.append(_render_block(block, table_key, countymax_data, now, frozen_store))
     html.append("</div>")
 
     after = json.dumps(frozen_store, sort_keys=True)
