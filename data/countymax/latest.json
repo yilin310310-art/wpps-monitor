@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-10-16 07:01:28",
+  "fetched_at": "2026-10-16 09:13:20",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/10/16 06:57:31",
-        "timefrom": "2026/10/16 05:50",
-        "timeto": "2026/10/16 06:50"
+        "updatetime": "2026/10/16 09:06:34",
+        "timefrom": "2026/10/16 08:00",
+        "timeto": "2026/10/16 09:00"
       },
       "counties": {
         "基隆市": {
@@ -15,6 +15,132 @@
         "新北市": {
           "rain": null,
           "stations": []
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": "6.0",
+          "stations": [
+            {
+              "id": "C0R71",
+              "name": "龍磐",
+              "location": "屏東縣恆春鎮恆春助航臺(NDB歸航臺)"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": null,
+          "stations": []
+        },
+        "花蓮縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0TA8",
+              "name": "立霧山",
+              "location": "花蓮縣秀林鄉富世村352號"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "C0S90",
+              "name": "蘭嶼高中",
+              "location": "臺東縣蘭嶼鄉椰油村37號(蘭嶼高中內)"
+            },
+            {
+              "id": "C0SD3",
+              "name": "東清國小",
+              "location": "臺東縣蘭嶼鄉東清村1鄰東清1號"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/10/16 09:06:34",
+        "timefrom": "2026/10/16 00:00",
+        "timeto": "2026/10/16 09:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "C0AH9",
+              "name": "福山植物園",
+              "location": "新北市烏來區福山植物園(生活植物區之民俗植物區觀測坪)"
+            }
+          ]
         },
         "臺北市": {
           "rain": null,
@@ -75,7 +201,7 @@
           "stations": []
         },
         "屏東縣": {
-          "rain": "2.5",
+          "rain": "10.0",
           "stations": [
             {
               "id": "C0R71",
@@ -85,138 +211,12 @@
           ]
         },
         "宜蘭縣": {
-          "rain": "0.5",
+          "rain": "1.5",
           "stations": [
             {
-              "id": "C0U76",
-              "name": "東澳",
-              "location": "宜蘭縣南澳鄉東岳村蘇花路三段209號(東澳國小)"
-            },
-            {
-              "id": "C1U84",
-              "name": "東澳嶺",
-              "location": "宜蘭縣南澳鄉(東澳嶺營區)"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0Z10",
-              "name": "東華",
-              "location": "花蓮縣壽豐鄉大學路二段1號(國立東華大學)"
-            }
-          ]
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/10/16 06:47:11",
-        "timefrom": "2026/10/16 00:00",
-        "timeto": "2026/10/16 06:40"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0AH9",
-              "name": "福山植物園",
-              "location": "新北市烏來區福山植物園(生活植物區之民俗植物區觀測坪)"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0R79",
-              "name": "九棚",
-              "location": "屏東縣滿州鄉九棚中科院基地"
-            }
-          ]
-        },
-        "宜蘭縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "01U47",
-              "name": "武塔",
-              "location": "宜蘭縣南澳鄉武塔村新溪路4號 - 第1河川分署"
+              "id": "C0U95",
+              "name": "鶯子嶺",
+              "location": "宜蘭縣頭城鎮(鶯子嶺通信站區內)"
             }
           ]
         },
@@ -231,7 +231,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "30.0",
+          "rain": "34.0",
           "stations": [
             {
               "id": "C0S90",
@@ -256,9 +256,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/10/16 06:57:31",
+        "updatetime": "2026/10/16 09:06:34",
         "timefrom": "2026/10/15 00:00",
-        "timeto": "2026/10/16 06:50"
+        "timeto": "2026/10/16 09:00"
       },
       "counties": {
         "基隆市": {
@@ -364,6 +364,11 @@
               "id": "C0R27",
               "name": "琉球嶼",
               "location": "屏東縣琉球鄉天台段596、597地號"
+            },
+            {
+              "id": "C0R71",
+              "name": "龍磐",
+              "location": "屏東縣恆春鎮恆春助航臺(NDB歸航臺)"
             }
           ]
         },
@@ -393,7 +398,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "34.5",
+          "rain": "38.5",
           "stations": [
             {
               "id": "C0S90",
@@ -418,9 +423,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/10/16 06:57:31",
+        "updatetime": "2026/10/16 09:06:34",
         "timefrom": "2026/10/14 00:00",
-        "timeto": "2026/10/16 06:50"
+        "timeto": "2026/10/16 09:00"
       },
       "counties": {
         "基隆市": {
@@ -542,6 +547,11 @@
               "id": "C0R27",
               "name": "琉球嶼",
               "location": "屏東縣琉球鄉天台段596、597地號"
+            },
+            {
+              "id": "C0R71",
+              "name": "龍磐",
+              "location": "屏東縣恆春鎮恆春助航臺(NDB歸航臺)"
             }
           ]
         },
@@ -576,7 +586,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "34.5",
+          "rain": "38.5",
           "stations": [
             {
               "id": "C0S90",
@@ -601,9 +611,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/10/16 06:57:31",
+        "updatetime": "2026/10/16 09:06:34",
         "timefrom": "2026/10/13 00:00",
-        "timeto": "2026/10/16 06:50"
+        "timeto": "2026/10/16 09:00"
       },
       "counties": {
         "基隆市": {
@@ -715,6 +725,11 @@
               "id": "C0R27",
               "name": "琉球嶼",
               "location": "屏東縣琉球鄉天台段596、597地號"
+            },
+            {
+              "id": "C0R71",
+              "name": "龍磐",
+              "location": "屏東縣恆春鎮恆春助航臺(NDB歸航臺)"
             }
           ]
         },
@@ -749,7 +764,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "34.5",
+          "rain": "38.5",
           "stations": [
             {
               "id": "C0S90",
@@ -774,9 +789,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/10/16 06:57:31",
+        "updatetime": "2026/10/16 09:06:34",
         "timefrom": "2026/10/12 00:00",
-        "timeto": "2026/10/16 06:50"
+        "timeto": "2026/10/16 09:00"
       },
       "counties": {
         "基隆市": {
@@ -888,6 +903,11 @@
               "id": "C0R27",
               "name": "琉球嶼",
               "location": "屏東縣琉球鄉天台段596、597地號"
+            },
+            {
+              "id": "C0R71",
+              "name": "龍磐",
+              "location": "屏東縣恆春鎮恆春助航臺(NDB歸航臺)"
             }
           ]
         },
@@ -922,7 +942,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "34.5",
+          "rain": "38.5",
           "stations": [
             {
               "id": "C0S90",
