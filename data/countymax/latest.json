@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-10-21 07:28:22",
+  "fetched_at": "2026-10-21 09:51:11",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/10/21 07:27:11",
-        "timefrom": "2026/10/21 06:20",
-        "timeto": "2026/10/21 07:20"
+        "updatetime": "2026/10/21 09:46:11",
+        "timefrom": "2026/10/21 08:00",
+        "timeto": "2026/10/21 09:00"
       },
       "counties": {
         "基隆市": {
@@ -15,6 +15,109 @@
         "新北市": {
           "rain": null,
           "stations": []
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": null,
+          "stations": []
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/10/21 09:48:14",
+        "timefrom": "2026/10/21 00:00",
+        "timeto": "2026/10/21 09:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0AH3",
+              "name": "五分山",
+              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
+            }
+          ]
         },
         "臺北市": {
           "rain": null,
@@ -79,109 +182,6 @@
           "stations": []
         },
         "宜蘭縣": {
-          "rain": null,
-          "stations": []
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/10/21 07:19:11",
-        "timefrom": "2026/10/21 00:00",
-        "timeto": "2026/10/21 07:10"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0AH3",
-              "name": "五分山",
-              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "宜蘭縣": {
           "rain": "1.0",
           "stations": [
             {
@@ -215,9 +215,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/10/21 07:27:11",
+        "updatetime": "2026/10/21 09:46:11",
         "timefrom": "2026/10/20 00:00",
-        "timeto": "2026/10/21 07:20"
+        "timeto": "2026/10/21 09:00"
       },
       "counties": {
         "基隆市": {
@@ -386,9 +386,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/10/21 07:27:11",
+        "updatetime": "2026/10/21 09:40:12",
         "timefrom": "2026/10/19 00:00",
-        "timeto": "2026/10/21 07:20"
+        "timeto": "2026/10/21 09:00"
       },
       "counties": {
         "基隆市": {
@@ -554,9 +554,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/10/21 07:27:11",
+        "updatetime": "2026/10/21 09:46:11",
         "timefrom": "2026/10/18 00:00",
-        "timeto": "2026/10/21 07:20"
+        "timeto": "2026/10/21 09:00"
       },
       "counties": {
         "基隆市": {
@@ -722,9 +722,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/10/21 07:27:11",
+        "updatetime": "2026/10/21 09:46:11",
         "timefrom": "2026/10/17 00:00",
-        "timeto": "2026/10/21 07:20"
+        "timeto": "2026/10/21 09:00"
       },
       "counties": {
         "基隆市": {
