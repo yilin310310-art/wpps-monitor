@@ -323,10 +323,10 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   td.up {{ color:#c00; font-weight:bold; }}
   td.down {{ color:#06c; font-weight:bold; }}
   td.obs-col {{ background:#f7f9e8; font-weight:bold; }}
-  table.cmp-table th.hdr-new { background:#d6e8ff; }
-  table.cmp-table th.hdr-modified { background:#ffe6c2; }
-  table.cmp-table th.hdr-first { background:#e9edf2; }
-  table.cmp-table th.hdr-observed { background:#eef4d8; }
+  table.cmp-table th.hdr-new {{ background:#d6e8ff; }}
+  table.cmp-table th.hdr-modified {{ background:#ffe6c2; }}
+  table.cmp-table th.hdr-first {{ background:#e9edf2; }}
+  table.cmp-table th.hdr-observed {{ background:#eef4d8; }}
   .period {{ font-weight:normal; font-size:0.72rem; color:#555; }}
   .legend span {{ display:inline-block; margin-right:16px; padding:2px 8px; border-radius:4px; font-size:0.8rem; }}
   footer {{ margin-top:3rem; font-size:0.75rem; color:#999; }}
