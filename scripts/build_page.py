@@ -15,6 +15,7 @@
   - 24小時雨量預測持續存檔但不顯示於本頁
 """
 import glob
+import itertools
 import json
 import os
 import re
@@ -207,7 +208,48 @@ def _clean_publish_time(text):
     return text
 
 
-def _render_block(block, table_key, countymax_data, now, frozen_store):
+def _mark_duplicates(snapshots, table_key, group_counter):
+    """
+    依「清理過的發布時間文字」+「各分區數值」判斷每一報要不要顯示：
+      - 跟上一筆『有顯示』的報次時間相同、內容也完全相同 -> 預設隱藏（可展開查看）
+      - 時間不同，或時間相同但內容有任何差異 -> 顯示（顏色邏輯沿用 _report_header_class）
+    回傳一個 list，每個元素是 dict：
+      snap / tbl / pub / areas_data / hidden / group（隱藏報次所屬的展開群組id）
+    """
+    entries = []
+    prev_visible_pub = None
+    prev_visible_areas = None
+    for snap in snapshots:
+        tbl = snap.get(table_key) or {}
+        pub = _clean_publish_time(tbl.get("publish_time", ""))
+        areas_data = tbl.get("areas", {})
+        is_dup = (
+            prev_visible_pub is not None
+            and pub == prev_visible_pub
+            and areas_data == prev_visible_areas
+        )
+        entries.append({
+            "snap": snap, "tbl": tbl, "pub": pub, "areas_data": areas_data,
+            "hidden": is_dup, "group": None, "dup_count": 0,
+        })
+        if not is_dup:
+            prev_visible_pub = pub
+            prev_visible_areas = areas_data
+
+    last_visible_idx = None
+    for idx, e in enumerate(entries):
+        if not e["hidden"]:
+            last_visible_idx = idx
+        else:
+            anchor = entries[last_visible_idx]
+            if anchor["group"] is None:
+                anchor["group"] = f"g{next(group_counter)}"
+            anchor["dup_count"] += 1
+            e["group"] = anchor["group"]
+    return entries
+
+
+def _render_block(block, table_key, countymax_data, now, frozen_store, group_counter):
     period_text = block["period"]
     snapshots = block["snapshots"]
 
@@ -224,40 +266,59 @@ def _render_block(block, table_key, countymax_data, now, frozen_store):
     )
     frozen_tag = "（已定案）" if is_frozen else "（更新中）"
 
+    entries = _mark_duplicates(snapshots, table_key, group_counter)
+
     html = ['<div class="block-card"><table class="cmp-table">']
     html.append(f"<caption>{period_text}</caption>")
     html.append("<tr><th class='sticky-col' rowspan='2'>分區</th>")
-    for snap in snapshots:
-        tbl = snap.get(table_key) or {}
-        pub = _clean_publish_time(tbl.get("publish_time", ""))
-        cls = _report_header_class(snap)
-        html.append(f"<th class='{cls}' colspan='2'>{pub}</th>")
+    for e in entries:
+        cls = _report_header_class(e["snap"])
+        dup_cls = " dup-col" if e["hidden"] else ""
+        style = " style='display:none;'" if e["hidden"] else ""
+        grp_attr = f" data-grp='{e['group']}'" if e["hidden"] else ""
+        toggle_html = ""
+        if (not e["hidden"]) and e["group"]:
+            toggle_html = (
+                f"<br><a href='javascript:void(0)' class='dup-toggle' "
+                f"onclick=\"toggleDup(this, '{e['group']}')\" "
+                f"data-count='{e['dup_count']}'>顯示 {e['dup_count']} 筆相同報次 ▸</a>"
+            )
+        html.append(
+            f"<th class='{cls}{dup_cls}'{style}{grp_attr} colspan='2'>{e['pub']}{toggle_html}</th>"
+        )
     obs_sub = f"<br><span class='period'>{observed_range}</span>" if observed_range else ""
     html.append(
         f"<th class='hdr-observed' rowspan='2'>觀測雨量<br>"
         f"<span class='period'>({observed_label}){frozen_tag}{obs_sub}</span></th>"
     )
     html.append("</tr><tr>")
-    for _ in snapshots:
-        html.append("<th class='sub-hdr'>平地</th><th class='sub-hdr'>山區</th>")
+    for e in entries:
+        dup_cls = " dup-col" if e["hidden"] else ""
+        style = " style='display:none;'" if e["hidden"] else ""
+        grp_attr = f" data-grp='{e['group']}'" if e["hidden"] else ""
+        html.append(f"<th class='sub-hdr{dup_cls}'{style}{grp_attr}>平地</th>")
+        html.append(f"<th class='sub-hdr{dup_cls}'{style}{grp_attr}>山區</th>")
     html.append("</tr>")
 
     for area in areas:
         html.append(f"<tr><td class='sticky-col'>{area}</td>")
         prev_areas_data = None
-        for snap in snapshots:
-            tbl = snap.get(table_key) or {}
-            areas_data = tbl.get("areas", {})
+        for e in entries:
+            areas_data = e["areas_data"]
             curr = areas_data.get(area, {"平地": "-", "山區": "-"})
-            prev = (prev_areas_data or {}).get(area) if prev_areas_data else None
+            prev = prev_areas_data.get(area) if prev_areas_data else None
 
             plain_val = curr.get("平地", "-")
             mtn_val = curr.get("山區", "-")
             plain_cls = _compare_class(prev.get("平地") if prev else None, plain_val) if prev else ""
             mtn_cls = _compare_class(prev.get("山區") if prev else None, mtn_val) if prev else ""
 
-            html.append(f"<td class='{plain_cls}'>{plain_val}</td>")
-            html.append(f"<td class='{mtn_cls}'>{mtn_val}</td>")
+            dup_cls = " dup-col" if e["hidden"] else ""
+            style = " style='display:none;'" if e["hidden"] else ""
+            grp_attr = f" data-grp='{e['group']}'" if e["hidden"] else ""
+
+            html.append(f"<td class='{plain_cls}{dup_cls}'{style}{grp_attr}>{plain_val}</td>")
+            html.append(f"<td class='{mtn_cls}{dup_cls}'{style}{grp_attr}>{mtn_val}</td>")
             prev_areas_data = areas_data
 
         obs_rain = observed_counties.get(area, {}).get("rain")
@@ -267,7 +328,7 @@ def _render_block(block, table_key, countymax_data, now, frozen_store):
     return "\n".join(html)
 
 
-def _render_event(event_dir, snapshots, table_key, title, countymax_data, now):
+def _render_event(event_dir, snapshots, table_key, title, countymax_data, now, group_counter):
     if not snapshots:
         return f"<p>（目前尚無{title}資料）</p>"
 
@@ -277,7 +338,7 @@ def _render_event(event_dir, snapshots, table_key, title, countymax_data, now):
 
     html = [f"<h3>{title}</h3>", '<div class="blocks-row">']
     for i, block in enumerate(blocks):
-        html.append(_render_block(block, table_key, countymax_data, now, frozen_store))
+        html.append(_render_block(block, table_key, countymax_data, now, frozen_store, group_counter))
     html.append("</div>")
 
     after = json.dumps(frozen_store, sort_keys=True)
@@ -327,6 +388,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   table.cmp-table th.hdr-modified {{ background:#ffe6c2; }}
   table.cmp-table th.hdr-first {{ background:#e9edf2; }}
   table.cmp-table th.hdr-observed {{ background:#eef4d8; }}
+  .dup-toggle {{ font-size:0.68rem; font-weight:normal; color:#2c6ecb; text-decoration:underline; cursor:pointer; }}
   .period {{ font-weight:normal; font-size:0.72rem; color:#555; }}
   .legend span {{ display:inline-block; margin-right:16px; padding:2px 8px; border-radius:4px; font-size:0.8rem; }}
   footer {{ margin-top:3rem; font-size:0.75rem; color:#999; }}
@@ -346,6 +408,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <span style="color:#c00;">紅字 = 與前一報相比預報上修</span>
   <span style="color:#06c;">藍字 = 與前一報相比預報下修</span>
   <span style="background:#eef4d8;">觀測雨量欄 = 依區塊時效自動挑選累積時段，時效結束後定案凍結</span>
+  <span>「顯示N筆相同報次」= 同一時間且內容完全相同的重複報次，預設收合，點擊可展開查看</span>
 </div>
 <p class="muted">說明：氣象署變更「總雨量預測時效區間」時會自動另開一個區塊（見下方橫向排列的表格），
 舊區塊不再新增預報報次，但觀測雨量會持續更新直到該區塊時效結束為止，屆時定案不再變動。</p>
@@ -357,6 +420,14 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
+function toggleDup(link, grp) {{
+  var cells = document.querySelectorAll('[data-grp="' + grp + '"]');
+  var willShow = link.textContent.indexOf('顯示') === 0;
+  cells.forEach(function(el) {{ el.style.display = willShow ? '' : 'none'; }});
+  var count = link.getAttribute('data-count');
+  link.textContent = willShow ? ('收合 ' + count + ' 筆相同報次 ▾') : ('顯示 ' + count + ' 筆相同報次 ▸');
+}}
+
 function showEvent(slug) {{
   document.querySelectorAll('.event-section').forEach(el => {{ el.style.display = 'none'; }});
   const target = document.getElementById('event-' + slug);
@@ -438,6 +509,7 @@ def build():
     )
     now = datetime.now(TW_TZ)
     countymax_data = _load_countymax_latest()
+    group_counter = itertools.count()
 
     # 先把每個事件的資料準備好，並依「最後一筆快照時間」排序，最新的事件排最前面
     events = []
@@ -466,7 +538,7 @@ def build():
             f"onclick=\"showEvent('{ev['slug']}')\">{ev['display_name']}</button>"
         )
         body = _render_event(ev["event_dir"], ev["snapshots"], "all_precip", "總雨量預測",
-                              countymax_data, now)
+                              countymax_data, now, group_counter)
         sections_html.append(
             f"<div class='event-section' id='event-{ev['slug']}' style='display:{display};'>"
             f"<h2>{ev['display_name']}</h2>{body}</div>"
