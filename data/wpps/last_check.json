@@ -1,9 +1,9 @@
 {
-  "last_checked_at": "2026-10-24 15:30:30",
+  "last_checked_at": "2026-10-24 15:40:21",
   "last_result": {
     "event_name": "第29號颱風(薔琵)各地區總雨量預測",
-    "change_type": "same_report_modified",
-    "saved": true,
-    "path": "/home/runner/work/wpps-monitor/wpps-monitor/data/wpps/第29號颱風薔琵各地區總雨量預測/20261024_153030_973790_same_report_modified.json"
+    "change_type": "no_change",
+    "saved": false,
+    "path": null
   }
 }
