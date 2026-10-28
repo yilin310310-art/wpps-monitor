@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-10-29 00:20:33",
+  "fetched_at": "2026-10-29 00:30:38",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/10/29 00:17:12",
-        "timefrom": "2026/10/28 23:10",
-        "timeto": "2026/10/29 00:10"
+        "updatetime": "2026/10/29 00:29:15",
+        "timefrom": "2026/10/28 23:20",
+        "timeto": "2026/10/29 00:20"
       },
       "counties": {
         "基隆市": {
@@ -63,14 +63,8 @@
           "stations": []
         },
         "嘉義縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0M9H",
-              "name": "水社寮",
-              "location": "嘉義縣竹崎鄉金獅寮段504-7地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
           "rain": null,
@@ -118,64 +112,34 @@
     },
     "本日累積": {
       "period": {
-        "updatetime": "2026/10/29 00:15:11",
+        "updatetime": "2026/10/29 00:26:27",
         "timefrom": "2026/10/29 00:00",
-        "timeto": "2026/10/29 00:00"
+        "timeto": "2026/10/29 00:20"
       },
       "counties": {
         "基隆市": {
-          "rain": "4.5",
-          "stations": [
-            {
-              "id": "C0B02",
-              "name": "基隆嶼",
-              "location": "基隆市中正區基隆嶼"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "新北市": {
-          "rain": "24.0",
-          "stations": [
-            {
-              "id": "01AF9",
-              "name": "三貂嶺",
-              "location": "新北市瑞芳區魚寮路底(三貂嶺火車站旁) - 第10河川分署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺北市": {
-          "rain": "21.0",
-          "stations": [
-            {
-              "id": "A1AD1",
-              "name": "擎天崗",
-              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "桃園市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0C80",
-              "name": "四稜",
-              "location": "桃園市復興區四稜段6地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "新竹市": {
           "rain": null,
           "stations": []
         },
         "新竹縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0D75",
-              "name": "樂山林道6k",
-              "location": "新竹縣五峰鄉檜山段33地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "苗栗縣": {
           "rain": null,
@@ -190,24 +154,8 @@
           "stations": []
         },
         "南投縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0I48",
-              "name": "梅峰",
-              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
-            },
-            {
-              "id": "C0I53",
-              "name": "小奇萊",
-              "location": "南投縣仁愛鄉小奇萊山指標1.4K處(小奇萊山頂附近)"
-            },
-            {
-              "id": "C1I47",
-              "name": "杉林溪",
-              "location": "南投縣竹山鎮大鞍里(杉林溪森林生態渡假園區收費亭附近)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "雲林縣": {
           "rain": null,
@@ -218,74 +166,32 @@
           "stations": []
         },
         "嘉義縣": {
-          "rain": "1.5",
-          "stations": [
-            {
-              "id": "C0M9H",
-              "name": "水社寮",
-              "location": "嘉義縣竹崎鄉金獅寮段504-7地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C1O92",
-              "name": "楠西",
-              "location": "臺南市楠西區中興路107號(楠西國中)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "高雄市": {
-          "rain": "11.5",
-          "stations": [
-            {
-              "id": "46810",
-              "name": "東沙島",
-              "location": "高雄市旗津區東沙52號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "屏東縣": {
-          "rain": "10.5",
-          "stations": [
-            {
-              "id": "C0R84",
-              "name": "牡丹池山",
-              "location": "屏東縣牡丹鄉牡丹池山山頂"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "宜蘭縣": {
-          "rain": "43.0",
-          "stations": [
-            {
-              "id": "C1U84",
-              "name": "東澳嶺",
-              "location": "宜蘭縣南澳鄉(東澳嶺營區)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "花蓮縣": {
-          "rain": "8.0",
-          "stations": [
-            {
-              "id": "C0TC6",
-              "name": "王武塔山",
-              "location": "花蓮縣萬榮鄉大觀段63地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺東縣": {
-          "rain": "18.5",
-          "stations": [
-            {
-              "id": "C0SD4",
-              "name": "牛頭山",
-              "location": "臺東縣綠島鄉"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "澎湖縣": {
           "rain": null,
@@ -303,9 +209,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/10/29 00:17:12",
+        "updatetime": "2026/10/29 00:29:15",
         "timefrom": "2026/10/28 00:00",
-        "timeto": "2026/10/29 00:10"
+        "timeto": "2026/10/29 00:20"
       },
       "counties": {
         "基隆市": {
@@ -488,7 +394,7 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/10/29 00:17:12",
+        "updatetime": "2026/10/29 00:23:15",
         "timefrom": "2026/10/27 00:00",
         "timeto": "2026/10/29 00:10"
       },
@@ -695,9 +601,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/10/29 00:17:12",
+        "updatetime": "2026/10/29 00:26:27",
         "timefrom": "2026/10/26 00:00",
-        "timeto": "2026/10/29 00:10"
+        "timeto": "2026/10/29 00:20"
       },
       "counties": {
         "基隆市": {
@@ -897,9 +803,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/10/29 00:17:12",
+        "updatetime": "2026/10/29 00:26:27",
         "timefrom": "2026/10/25 00:00",
-        "timeto": "2026/10/29 00:10"
+        "timeto": "2026/10/29 00:20"
       },
       "counties": {
         "基隆市": {
