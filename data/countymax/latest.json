@@ -1,10 +1,142 @@
 {
-  "fetched_at": "2026-11-04 02:30:49",
+  "fetched_at": "2026-11-04 02:40:36",
   "durations": {
     "最近1小時": {
       "period": {
+        "updatetime": "2026/11/04 02:37:15",
+        "timefrom": "2026/11/04 01:30",
+        "timeto": "2026/11/04 02:30"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": null,
+          "stations": []
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": "5.0",
+          "stations": [
+            {
+              "id": "C0R72",
+              "name": "旭海",
+              "location": "屏東縣牡丹鄉(旭海大草原步道旁)"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "01U45",
+              "name": "樟林",
+              "location": "宜蘭縣南澳鄉金洋村(村辦公室) - 第1河川分署"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0Z28",
+              "name": "德武",
+              "location": "花蓮縣玉里鎮德武里附近山區道路旁(德武段680地號內)"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "C0S73",
+              "name": "綠島",
+              "location": "臺東縣綠島鄉"
+            },
+            {
+              "id": "C0SD4",
+              "name": "牛頭山",
+              "location": "臺東縣綠島鄉"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0W22",
+              "name": "北竿",
+              "location": "連江縣北竿鄉?里村1-1號"
+            }
+          ]
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
         "updatetime": "2026/11/04 02:28:15",
-        "timefrom": "2026/11/04 01:20",
+        "timefrom": "2026/11/04 00:00",
         "timeto": "2026/11/04 02:20"
       },
       "counties": {
@@ -69,134 +201,7 @@
           "stations": []
         },
         "屏東縣": {
-          "rain": "5.5",
-          "stations": [
-            {
-              "id": "C0R72",
-              "name": "旭海",
-              "location": "屏東縣牡丹鄉(旭海大草原步道旁)"
-            }
-          ]
-        },
-        "宜蘭縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01U45",
-              "name": "樟林",
-              "location": "宜蘭縣南澳鄉金洋村(村辦公室) - 第1河川分署"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0Z28",
-              "name": "德武",
-              "location": "花蓮縣玉里鎮德武里附近山區道路旁(德武段680地號內)"
-            }
-          ]
-        },
-        "臺東縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0SD4",
-              "name": "牛頭山",
-              "location": "臺東縣綠島鄉"
-            }
-          ]
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0W22",
-              "name": "北竿",
-              "location": "連江縣北竿鄉?里村1-1號"
-            }
-          ]
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/04 02:25:12",
-        "timefrom": "2026/11/04 00:00",
-        "timeto": "2026/11/04 02:10"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": null,
-          "stations": []
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": "6.0",
+          "rain": "6.5",
           "stations": [
             {
               "id": "C0R72",
@@ -236,7 +241,7 @@
           ]
         },
         "臺東縣": {
-          "rain": "5.5",
+          "rain": "6.0",
           "stations": [
             {
               "id": "C0SD4",
@@ -267,9 +272,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/04 02:28:15",
+        "updatetime": "2026/11/04 02:37:15",
         "timefrom": "2026/11/03 00:00",
-        "timeto": "2026/11/04 02:20"
+        "timeto": "2026/11/04 02:30"
       },
       "counties": {
         "基隆市": {
@@ -448,9 +453,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/04 02:28:15",
+        "updatetime": "2026/11/04 02:37:15",
         "timefrom": "2026/11/02 00:00",
-        "timeto": "2026/11/04 02:20"
+        "timeto": "2026/11/04 02:30"
       },
       "counties": {
         "基隆市": {
@@ -639,9 +644,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/04 02:26:10",
+        "updatetime": "2026/11/04 02:37:15",
         "timefrom": "2026/11/01 00:00",
-        "timeto": "2026/11/04 02:20"
+        "timeto": "2026/11/04 02:30"
       },
       "counties": {
         "基隆市": {
@@ -835,9 +840,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/04 02:26:10",
+        "updatetime": "2026/11/04 02:37:15",
         "timefrom": "2026/10/31 00:00",
-        "timeto": "2026/11/04 02:20"
+        "timeto": "2026/11/04 02:30"
       },
       "counties": {
         "基隆市": {
