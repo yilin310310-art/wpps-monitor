@@ -30,7 +30,10 @@ def _event_slug(event_name: str) -> str:
 def _latest_snapshot_path(event_dir: str):
     if not os.path.isdir(event_dir):
         return None
-    files = sorted(f for f in os.listdir(event_dir) if f.endswith(".json"))
+    # 只看真正的快照檔（以日期數字開頭）；_frozen_observed.json 這類輔助檔以底線開頭，
+    # 排序會跑到最後面，若被當成「最新快照」比對，會導致之後每次抓取都判定為有變化。
+    files = sorted(f for f in os.listdir(event_dir)
+                   if f.endswith(".json") and f[:1].isdigit())
     return os.path.join(event_dir, files[-1]) if files else None
 
 
