@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-11-05 07:00:47",
+  "fetched_at": "2026-11-05 07:10:25",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/05 06:56:31",
-        "timefrom": "2026/11/05 05:10",
-        "timeto": "2026/11/05 06:10"
+        "updatetime": "2026/11/05 07:08:35",
+        "timefrom": "2026/11/05 06:00",
+        "timeto": "2026/11/05 07:00"
       },
       "counties": {
         "基隆市": {
@@ -87,8 +87,14 @@
           "stations": []
         },
         "臺東縣": {
-          "rain": null,
-          "stations": []
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0SA0",
+              "name": "歷坵",
+              "location": "臺東縣太麻里鄉歷坵產業道路附近山區"
+            }
+          ]
         },
         "澎湖縣": {
           "rain": null,
