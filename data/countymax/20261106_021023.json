@@ -1,0 +1,1069 @@
+{
+  "fetched_at": "2026-11-06 02:10:27",
+  "durations": {
+    "最近1小時": {
+      "period": {
+        "updatetime": "2026/11/06 02:06:34",
+        "timefrom": "2026/11/06 01:00",
+        "timeto": "2026/11/06 02:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "CAB03",
+              "name": "國三S004K",
+              "location": "基隆市七堵區國道3號南向4.11K"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "C1A9N",
+              "name": "四十份",
+              "location": "新北市新店區北宜公路(文山事業區4林班)"
+            },
+            {
+              "id": "C2AK4",
+              "name": "漁光",
+              "location": "新北市坪林區漁光里"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46691",
+              "name": "鞍部",
+              "location": "臺北市北投區陽明山竹子湖路111號"
+            },
+            {
+              "id": "A1AC4",
+              "name": "指南里",
+              "location": "臺北市文山區指南路三段(水鋼琴社區附近) - 北市府大地工程處"
+            },
+            {
+              "id": "A1AC9",
+              "name": "溪山里",
+              "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD1",
+              "name": "擎天崗",
+              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD2",
+              "name": "竹子湖",
+              "location": "臺北市北投區竹子湖產業道路3K+200(青菜園餐廳附近) - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD4",
+              "name": "小油坑",
+              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD6",
+              "name": "貓空",
+              "location": "臺北市文山區(指南水保教室旁停車場) - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD7",
+              "name": "茶製場",
+              "location": "臺北市南港區舊莊街二段(茶葉製造示範場停車場) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": "12.5",
+          "stations": [
+            {
+              "id": "C0UB1",
+              "name": "蘇澳",
+              "location": "宜蘭縣蘇澳鎮港區路1號6樓(蘇澳港行政大樓)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/06 02:06:34",
+        "timefrom": "2026/11/06 00:00",
+        "timeto": "2026/11/06 02:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "CAB03",
+              "name": "國三S004K",
+              "location": "基隆市七堵區國道3號南向4.11K"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "3.0",
+          "stations": [
+            {
+              "id": "C0A93",
+              "name": "三和",
+              "location": "新北市金山區(三和國小兩湖分校)"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "A1AC9",
+              "name": "溪山里",
+              "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD1",
+              "name": "擎天崗",
+              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
+            },
+            {
+              "id": "A1AD4",
+              "name": "小油坑",
+              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": "16.5",
+          "stations": [
+            {
+              "id": "81U91",
+              "name": "永樂國小",
+              "location": "宜蘭縣蘇澳鎮永樂路1號 - 農村水保署"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "2日累積": {
+      "period": {
+        "updatetime": "2026/11/06 02:06:34",
+        "timefrom": "2026/11/05 00:00",
+        "timeto": "2026/11/06 02:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "4.0",
+          "stations": [
+            {
+              "id": "C0B06",
+              "name": "暖暖",
+              "location": "基隆市暖暖區東碇路15號(暖暖運動公園)"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "18.5",
+          "stations": [
+            {
+              "id": "C1AK5",
+              "name": "八煙",
+              "location": "新北市金山區臺2甲線8.9K"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "9.5",
+          "stations": [
+            {
+              "id": "A1AD4",
+              "name": "小油坑",
+              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0C80",
+              "name": "四稜",
+              "location": "桃園市復興區四稜段6地號"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0I48",
+              "name": "梅峰",
+              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
+            }
+          ]
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "C2R49",
+              "name": "九如",
+              "location": "屏東縣九如鄉九如路二段416號九如鄉公所屋頂"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "41.5",
+          "stations": [
+            {
+              "id": "C1U84",
+              "name": "東澳嶺",
+              "location": "宜蘭縣南澳鄉(東澳嶺營區)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "C0TC2",
+              "name": "光復林道16K",
+              "location": "花蓮縣萬榮鄉馬太鞍段113地號"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81S92",
+              "name": "金峰鄉公所",
+              "location": "臺東縣金峰鄉嘉蘭村12鄰665號 - 農村水保署"
+            },
+            {
+              "id": "C0S70",
+              "name": "知本",
+              "location": "臺東縣卑南鄉溫泉村(溫泉國小樂山分校)"
+            },
+            {
+              "id": "C0SA0",
+              "name": "歷坵",
+              "location": "臺東縣太麻里鄉歷坵產業道路附近山區"
+            },
+            {
+              "id": "C0SA2",
+              "name": "金崙山",
+              "location": "臺東縣太麻里鄉富山產業道路附近山區(與金峰鄉交界附近)"
+            },
+            {
+              "id": "C1S88",
+              "name": "壽卡",
+              "location": "臺東縣達仁鄉(大武事業區48林班、電信轉播站後)"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "3日累積": {
+      "period": {
+        "updatetime": "2026/11/06 02:06:34",
+        "timefrom": "2026/11/04 00:00",
+        "timeto": "2026/11/06 02:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "4.0",
+          "stations": [
+            {
+              "id": "C0B06",
+              "name": "暖暖",
+              "location": "基隆市暖暖區東碇路15號(暖暖運動公園)"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "18.5",
+          "stations": [
+            {
+              "id": "C1AK5",
+              "name": "八煙",
+              "location": "新北市金山區臺2甲線8.9K"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "9.5",
+          "stations": [
+            {
+              "id": "A1AD4",
+              "name": "小油坑",
+              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0C80",
+              "name": "四稜",
+              "location": "桃園市復興區四稜段6地號"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0I48",
+              "name": "梅峰",
+              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
+            },
+            {
+              "id": "C1I47",
+              "name": "杉林溪",
+              "location": "南投縣竹山鎮大鞍里(杉林溪森林生態渡假園區收費亭附近)"
+            }
+          ]
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81M79",
+              "name": "麻竹湖步道",
+              "location": "嘉義縣番路鄉公興村龍美（麻竹湖步道入口旁） - 農村水保署"
+            },
+            {
+              "id": "C2M99",
+              "name": "大巃頂",
+              "location": "嘉義縣梅山鄉太平村"
+            }
+          ]
+        },
+        "臺南市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C1O87",
+              "name": "大棟山",
+              "location": "臺南市白河區(大棟山三角點)"
+            }
+          ]
+        },
+        "高雄市": {
+          "rain": "9.0",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "8.5",
+          "stations": [
+            {
+              "id": "C0R83",
+              "name": "高士",
+              "location": "屏東縣牡丹鄉高士社區進水廠水塔頂"
+            },
+            {
+              "id": "C2R9A",
+              "name": "高士國小",
+              "location": "屏東縣牡丹鄉高士路29號"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "41.5",
+          "stations": [
+            {
+              "id": "C1U84",
+              "name": "東澳嶺",
+              "location": "宜蘭縣南澳鄉(東澳嶺營區)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "C0TC2",
+              "name": "光復林道16K",
+              "location": "花蓮縣萬榮鄉馬太鞍段113地號"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "12.5",
+          "stations": [
+            {
+              "id": "C0SD4",
+              "name": "牛頭山",
+              "location": "臺東縣綠島鄉"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0W22",
+              "name": "北竿",
+              "location": "連江縣北竿鄉?里村1-1號"
+            }
+          ]
+        }
+      }
+    },
+    "4日累積": {
+      "period": {
+        "updatetime": "2026/11/06 02:06:34",
+        "timefrom": "2026/11/03 00:00",
+        "timeto": "2026/11/06 02:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "8.5",
+          "stations": [
+            {
+              "id": "C0B06",
+              "name": "暖暖",
+              "location": "基隆市暖暖區東碇路15號(暖暖運動公園)"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "35.0",
+          "stations": [
+            {
+              "id": "C0AH9",
+              "name": "福山植物園",
+              "location": "新北市烏來區福山植物園(生活植物區之民俗植物區觀測坪)"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "15.5",
+          "stations": [
+            {
+              "id": "A1AD4",
+              "name": "小油坑",
+              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "7.0",
+          "stations": [
+            {
+              "id": "C0C80",
+              "name": "四稜",
+              "location": "桃園市復興區四稜段6地號"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "21D35",
+              "name": "西丘斯山",
+              "location": "新竹縣尖石鄉秀巒村 - 石門水庫"
+            }
+          ]
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0I48",
+              "name": "梅峰",
+              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
+            },
+            {
+              "id": "C1I47",
+              "name": "杉林溪",
+              "location": "南投縣竹山鎮大鞍里(杉林溪森林生態渡假園區收費亭附近)"
+            },
+            {
+              "id": "C1I50",
+              "name": "大尖山",
+              "location": "南投縣仁愛鄉大尖山"
+            }
+          ]
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81M79",
+              "name": "麻竹湖步道",
+              "location": "嘉義縣番路鄉公興村龍美（麻竹湖步道入口旁） - 農村水保署"
+            },
+            {
+              "id": "C1M39",
+              "name": "龍美",
+              "location": "嘉義縣番路鄉公興村龍美地區(原瀨頭)"
+            },
+            {
+              "id": "C2M99",
+              "name": "大巃頂",
+              "location": "嘉義縣梅山鄉太平村"
+            }
+          ]
+        },
+        "臺南市": {
+          "rain": "11.0",
+          "stations": [
+            {
+              "id": "C2O81",
+              "name": "曾文",
+              "location": "臺南市楠西區曾文新村(曾文水庫管理局內)"
+            }
+          ]
+        },
+        "高雄市": {
+          "rain": "13.0",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "31.0",
+          "stations": [
+            {
+              "id": "C0R76",
+              "name": "南仁湖",
+              "location": "屏東縣滿州鄉南仁湖步道4K處山頂觀測站旁"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "171.5",
+          "stations": [
+            {
+              "id": "C0UA5",
+              "name": "西帽山",
+              "location": "宜蘭縣南澳鄉台泥大白山運石道附近山區(羅東事業區96林班)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "77.5",
+          "stations": [
+            {
+              "id": "C0TC2",
+              "name": "光復林道16K",
+              "location": "花蓮縣萬榮鄉馬太鞍段113地號"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "48.0",
+          "stations": [
+            {
+              "id": "01S27",
+              "name": "樟原(1)",
+              "location": "臺東縣長濱鄉樟原村三間南溪5號(南溪國小後) - 第8河川分署"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0W22",
+              "name": "北竿",
+              "location": "連江縣北竿鄉?里村1-1號"
+            }
+          ]
+        }
+      }
+    },
+    "5日累積": {
+      "period": {
+        "updatetime": "2026/11/06 01:57:12",
+        "timefrom": "2026/11/02 00:00",
+        "timeto": "2026/11/06 01:20"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "43.0",
+          "stations": [
+            {
+              "id": "C0B06",
+              "name": "暖暖",
+              "location": "基隆市暖暖區東碇路15號(暖暖運動公園)"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "104.5",
+          "stations": [
+            {
+              "id": "C1AK5",
+              "name": "八煙",
+              "location": "新北市金山區臺2甲線8.9K"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "60.5",
+          "stations": [
+            {
+              "id": "A1AD1",
+              "name": "擎天崗",
+              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "10.0",
+          "stations": [
+            {
+              "id": "C0C80",
+              "name": "四稜",
+              "location": "桃園市復興區四稜段6地號"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "21D35",
+              "name": "西丘斯山",
+              "location": "新竹縣尖石鄉秀巒村 - 石門水庫"
+            }
+          ]
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "C0I48",
+              "name": "梅峰",
+              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
+            }
+          ]
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81M79",
+              "name": "麻竹湖步道",
+              "location": "嘉義縣番路鄉公興村龍美（麻竹湖步道入口旁） - 農村水保署"
+            },
+            {
+              "id": "C1M39",
+              "name": "龍美",
+              "location": "嘉義縣番路鄉公興村龍美地區(原瀨頭)"
+            },
+            {
+              "id": "C2M99",
+              "name": "大巃頂",
+              "location": "嘉義縣梅山鄉太平村"
+            }
+          ]
+        },
+        "臺南市": {
+          "rain": "11.0",
+          "stations": [
+            {
+              "id": "C2O81",
+              "name": "曾文",
+              "location": "臺南市楠西區曾文新村(曾文水庫管理局內)"
+            }
+          ]
+        },
+        "高雄市": {
+          "rain": "13.0",
+          "stations": [
+            {
+              "id": "46902",
+              "name": "南沙島",
+              "location": "高雄市旗津區819號(太平島)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "31.0",
+          "stations": [
+            {
+              "id": "C0R76",
+              "name": "南仁湖",
+              "location": "屏東縣滿州鄉南仁湖步道4K處山頂觀測站旁"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "225.0",
+          "stations": [
+            {
+              "id": "C0UA5",
+              "name": "西帽山",
+              "location": "宜蘭縣南澳鄉台泥大白山運石道附近山區(羅東事業區96林班)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "117.5",
+          "stations": [
+            {
+              "id": "C0T9I",
+              "name": "豐濱",
+              "location": "花蓮縣豐濱鄉豐濱村"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "63.0",
+          "stations": [
+            {
+              "id": "01S27",
+              "name": "樟原(1)",
+              "location": "臺東縣長濱鄉樟原村三間南溪5號(南溪國小後) - 第8河川分署"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0W22",
+              "name": "北竿",
+              "location": "連江縣北竿鄉?里村1-1號"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "errors": {}
+}
