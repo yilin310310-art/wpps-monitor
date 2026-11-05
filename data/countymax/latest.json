@@ -1,168 +1,11 @@
 {
-  "fetched_at": "2026-11-06 01:10:25",
+  "fetched_at": "2026-11-06 01:20:26",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/06 01:05:12",
-        "timefrom": "2026/11/05 23:50",
-        "timeto": "2026/11/06 00:50"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "46694",
-              "name": "基隆",
-              "location": "基隆市仁愛區港西街6號6樓(海港大樓)"
-            },
-            {
-              "id": "CAB03",
-              "name": "國三S004K",
-              "location": "基隆市七堵區國道3號南向4.11K"
-            },
-            {
-              "id": "CAB05",
-              "name": "國三N002K",
-              "location": "基隆市中山區國道3號北向2.52K"
-            }
-          ]
-        },
-        "新北市": {
-          "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0A93",
-              "name": "三和",
-              "location": "新北市金山區(三和國小兩湖分校)"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "A1A9S",
-              "name": "湖田國小",
-              "location": "臺北市北投區陽明山竹子湖路17-2號 - 北市府水利處"
-            },
-            {
-              "id": "A1AC9",
-              "name": "溪山里",
-              "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
-            },
-            {
-              "id": "A1AD1",
-              "name": "擎天崗",
-              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
-            },
-            {
-              "id": "A1AD4",
-              "name": "小油坑",
-              "location": "臺北市北投區陽金公路(往小油坑風景區方向) - 北市府大地工程處"
-            },
-            {
-              "id": "C0AC4",
-              "name": "大屯山",
-              "location": "臺北市北投區湖田段461-6地號(民航局大屯山助航臺)"
-            }
-          ]
-        },
-        "桃園市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0C80",
-              "name": "四稜",
-              "location": "桃園市復興區四稜段6地號"
-            }
-          ]
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "宜蘭縣": {
-          "rain": "11.5",
-          "stations": [
-            {
-              "id": "C2UC4",
-              "name": "中城",
-              "location": "宜蘭縣冬山鄉中山村"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/06 01:06:34",
-        "timefrom": "2026/11/06 00:00",
-        "timeto": "2026/11/06 01:00"
+        "updatetime": "2026/11/06 01:17:13",
+        "timefrom": "2026/11/06 00:10",
+        "timeto": "2026/11/06 01:10"
       },
       "counties": {
         "基隆市": {
@@ -204,6 +47,11 @@
               "location": "臺北市北投區陽明山竹子湖路17-2號 - 北市府水利處"
             },
             {
+              "id": "A1AC4",
+              "name": "指南里",
+              "location": "臺北市文山區指南路三段(水鋼琴社區附近) - 北市府大地工程處"
+            },
+            {
               "id": "A1AC9",
               "name": "溪山里",
               "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
@@ -273,12 +121,143 @@
           "stations": []
         },
         "宜蘭縣": {
-          "rain": "9.5",
+          "rain": "11.0",
           "stations": [
             {
-              "id": "C2UC4",
-              "name": "中城",
-              "location": "宜蘭縣冬山鄉中山村"
+              "id": "81U91",
+              "name": "永樂國小",
+              "location": "宜蘭縣蘇澳鎮永樂路1號 - 農村水保署"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/06 01:17:13",
+        "timefrom": "2026/11/06 00:00",
+        "timeto": "2026/11/06 01:10"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46694",
+              "name": "基隆",
+              "location": "基隆市仁愛區港西街6號6樓(海港大樓)"
+            },
+            {
+              "id": "CAB03",
+              "name": "國三S004K",
+              "location": "基隆市七堵區國道3號南向4.11K"
+            },
+            {
+              "id": "CAB05",
+              "name": "國三N002K",
+              "location": "基隆市中山區國道3號北向2.52K"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "C0A93",
+              "name": "三和",
+              "location": "新北市金山區(三和國小兩湖分校)"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "A1AD1",
+              "name": "擎天崗",
+              "location": "臺北市士林區陽明山國家公園擎天崗觀景臺南方200公尺 - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": "11.0",
+          "stations": [
+            {
+              "id": "81U91",
+              "name": "永樂國小",
+              "location": "宜蘭縣蘇澳鎮永樂路1號 - 農村水保署"
             }
           ]
         },
@@ -306,9 +285,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/06 01:06:34",
+        "updatetime": "2026/11/06 01:17:13",
         "timefrom": "2026/11/05 00:00",
-        "timeto": "2026/11/06 01:00"
+        "timeto": "2026/11/06 01:10"
       },
       "counties": {
         "基隆市": {
@@ -428,7 +407,7 @@
           ]
         },
         "宜蘭縣": {
-          "rain": "35.0",
+          "rain": "38.0",
           "stations": [
             {
               "id": "01U12",
@@ -493,9 +472,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/06 01:06:34",
+        "updatetime": "2026/11/06 01:17:13",
         "timefrom": "2026/11/04 00:00",
-        "timeto": "2026/11/06 01:00"
+        "timeto": "2026/11/06 01:10"
       },
       "counties": {
         "基隆市": {
@@ -632,7 +611,7 @@
           ]
         },
         "宜蘭縣": {
-          "rain": "35.0",
+          "rain": "38.0",
           "stations": [
             {
               "id": "01U12",
@@ -683,9 +662,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/06 01:06:34",
+        "updatetime": "2026/11/06 01:17:13",
         "timefrom": "2026/11/03 00:00",
-        "timeto": "2026/11/06 01:00"
+        "timeto": "2026/11/06 01:10"
       },
       "counties": {
         "基隆市": {
@@ -833,7 +812,7 @@
           ]
         },
         "宜蘭縣": {
-          "rain": "167.5",
+          "rain": "168.5",
           "stations": [
             {
               "id": "C0UA5",
@@ -884,9 +863,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/06 01:06:34",
+        "updatetime": "2026/11/06 01:17:13",
         "timefrom": "2026/11/02 00:00",
-        "timeto": "2026/11/06 01:00"
+        "timeto": "2026/11/06 01:10"
       },
       "counties": {
         "基隆市": {
@@ -910,7 +889,7 @@
           ]
         },
         "臺北市": {
-          "rain": "60.0",
+          "rain": "60.5",
           "stations": [
             {
               "id": "A1AD1",
@@ -1024,7 +1003,7 @@
           ]
         },
         "宜蘭縣": {
-          "rain": "221.5",
+          "rain": "222.5",
           "stations": [
             {
               "id": "C0UA5",
