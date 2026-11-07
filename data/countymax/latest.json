@@ -1,7 +1,151 @@
 {
-  "fetched_at": "2026-11-08 01:10:26",
+  "fetched_at": "2026-11-08 01:20:29",
   "durations": {
     "最近1小時": {
+      "period": {
+        "updatetime": "2026/11/08 01:15:27",
+        "timefrom": "2026/11/08 00:00",
+        "timeto": "2026/11/08 01:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": "2.0",
+          "stations": [
+            {
+              "id": "O1AH3",
+              "name": "吉林國小",
+              "location": "新北市貢寮區吉林里內寮街55號 - 第1河川分署"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46753",
+              "name": "阿里山",
+              "location": "嘉義縣阿里山鄉中正村4鄰東阿里山73-1號"
+            }
+          ]
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "6.5",
+          "stations": [
+            {
+              "id": "C0V84",
+              "name": "鳳鼻頭",
+              "location": "高雄市小港區南星路107號"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "3.0",
+          "stations": [
+            {
+              "id": "01Q86",
+              "name": "水利署牡丹",
+              "location": "屏東縣牡丹鄉牡丹村 - 第7河川分署"
+            },
+            {
+              "id": "C0R72",
+              "name": "旭海",
+              "location": "屏東縣牡丹鄉(旭海大草原步道旁)"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "C0U71",
+              "name": "太平山",
+              "location": "宜蘭縣大同鄉太平林道22.3K(太平山93林班)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "3.5",
+          "stations": [
+            {
+              "id": "C1Z24",
+              "name": "中平林道",
+              "location": "花蓮縣卓溪鄉中平林道(玉里林道)約15K鐵牌處步行上山高地"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "C0SD4",
+              "name": "牛頭山",
+              "location": "臺東縣綠島鄉"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
       "period": {
         "updatetime": "2026/11/08 01:06:33",
         "timefrom": "2026/11/08 00:00",
@@ -140,148 +284,9 @@
         }
       }
     },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/08 00:57:11",
-        "timefrom": "2026/11/08 00:00",
-        "timeto": "2026/11/08 00:40"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "O1AH3",
-              "name": "吉林國小",
-              "location": "新北市貢寮區吉林里內寮街55號 - 第1河川分署"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "46753",
-              "name": "阿里山",
-              "location": "嘉義縣阿里山鄉中正村4鄰東阿里山73-1號"
-            }
-          ]
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0V84",
-              "name": "鳳鼻頭",
-              "location": "高雄市小港區南星路107號"
-            }
-          ]
-        },
-        "屏東縣": {
-          "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0R72",
-              "name": "旭海",
-              "location": "屏東縣牡丹鄉(旭海大草原步道旁)"
-            }
-          ]
-        },
-        "宜蘭縣": {
-          "rain": "1.5",
-          "stations": [
-            {
-              "id": "C0U71",
-              "name": "太平山",
-              "location": "宜蘭縣大同鄉太平林道22.3K(太平山93林班)"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": "3.0",
-          "stations": [
-            {
-              "id": "C0TC6",
-              "name": "王武塔山",
-              "location": "花蓮縣萬榮鄉大觀段63地號"
-            }
-          ]
-        },
-        "臺東縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0SD4",
-              "name": "牛頭山",
-              "location": "臺東縣綠島鄉"
-            }
-          ]
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/08 01:06:33",
+        "updatetime": "2026/11/08 01:15:27",
         "timefrom": "2026/11/07 00:00",
         "timeto": "2026/11/08 01:00"
       },
@@ -468,9 +473,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/08 01:06:33",
+        "updatetime": "2026/11/08 01:20:15",
         "timefrom": "2026/11/06 00:00",
-        "timeto": "2026/11/08 01:00"
+        "timeto": "2026/11/08 01:10"
       },
       "counties": {
         "基隆市": {
@@ -589,7 +594,7 @@
           ]
         },
         "高雄市": {
-          "rain": "6.5",
+          "rain": "7.5",
           "stations": [
             {
               "id": "C0V84",
@@ -660,9 +665,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/08 01:06:33",
+        "updatetime": "2026/11/08 01:20:15",
         "timefrom": "2026/11/05 00:00",
-        "timeto": "2026/11/08 01:00"
+        "timeto": "2026/11/08 01:10"
       },
       "counties": {
         "基隆市": {
@@ -781,7 +786,7 @@
           ]
         },
         "高雄市": {
-          "rain": "6.5",
+          "rain": "7.5",
           "stations": [
             {
               "id": "C0V84",
@@ -852,9 +857,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/08 01:06:33",
+        "updatetime": "2026/11/08 01:20:15",
         "timefrom": "2026/11/04 00:00",
-        "timeto": "2026/11/08 01:00"
+        "timeto": "2026/11/08 01:10"
       },
       "counties": {
         "基隆市": {
