@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-11-09 00:40:23",
+  "fetched_at": "2026-11-09 00:50:25",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/09 00:36:11",
-        "timefrom": "2026/11/08 23:20",
-        "timeto": "2026/11/09 00:20"
+        "updatetime": "2026/11/09 00:49:15",
+        "timefrom": "2026/11/08 23:40",
+        "timeto": "2026/11/09 00:40"
       },
       "counties": {
         "基隆市": {
@@ -19,7 +19,7 @@
           ]
         },
         "新北市": {
-          "rain": "9.0",
+          "rain": "18.5",
           "stations": [
             {
               "id": "C0AH3",
@@ -29,7 +29,7 @@
           ]
         },
         "臺北市": {
-          "rain": "4.5",
+          "rain": "5.0",
           "stations": [
             {
               "id": "A1AC9",
@@ -39,116 +39,7 @@
           ]
         },
         "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "宜蘭縣": {
-          "rain": null,
-          "stations": []
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/09 00:36:11",
-        "timefrom": "2026/11/09 00:00",
-        "timeto": "2026/11/09 00:20"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": "8.0",
-          "stations": [
-            {
-              "id": "C0AH3",
-              "name": "五分山",
-              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": "4.0",
-          "stations": [
-            {
-              "id": "A1AC9",
-              "name": "溪山里",
-              "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
-            }
-          ]
-        },
-        "桃園市": {
-          "rain": "0.5",
+          "rain": "1.5",
           "stations": [
             {
               "id": "CAC05",
@@ -202,8 +93,135 @@
           "stations": []
         },
         "屏東縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81R64",
+              "name": "佳義國小",
+              "location": "屏東縣瑪家鄉佳義村 - 農村水保署"
+            }
+          ]
+        },
+        "宜蘭縣": {
           "rain": null,
           "stations": []
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/09 00:46:11",
+        "timefrom": "2026/11/09 00:00",
+        "timeto": "2026/11/09 00:40"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": "15.0",
+          "stations": [
+            {
+              "id": "C0AH3",
+              "name": "五分山",
+              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "4.0",
+          "stations": [
+            {
+              "id": "A1AC9",
+              "name": "溪山里",
+              "location": "臺北市士林區萬溪產業道路支線1K+650 - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "1.5",
+          "stations": [
+            {
+              "id": "CAC05",
+              "name": "西濱S017K",
+              "location": "桃園市蘆竹區西濱快道南向17.5K"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81R64",
+              "name": "佳義國小",
+              "location": "屏東縣瑪家鄉佳義村 - 農村水保署"
+            }
+          ]
         },
         "宜蘭縣": {
           "rain": null,
@@ -233,9 +251,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/09 00:36:28",
+        "updatetime": "2026/11/09 00:46:11",
         "timefrom": "2026/11/08 00:00",
-        "timeto": "2026/11/09 00:30"
+        "timeto": "2026/11/09 00:40"
       },
       "counties": {
         "基隆市": {
@@ -249,7 +267,7 @@
           ]
         },
         "新北市": {
-          "rain": "12.5",
+          "rain": "19.5",
           "stations": [
             {
               "id": "C0AH3",
@@ -269,18 +287,8 @@
           ]
         },
         "桃園市": {
-          "rain": "0.5",
+          "rain": "1.5",
           "stations": [
-            {
-              "id": "21C09",
-              "name": "嘎拉賀",
-              "location": "桃園市復興區華峻里 - 石門水庫"
-            },
-            {
-              "id": "CAC04",
-              "name": "拉拉山",
-              "location": "桃園市復興區塔曼山登山口前大型水塔附近"
-            },
             {
               "id": "CAC05",
               "name": "西濱S017K",
@@ -406,9 +414,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/09 00:36:28",
+        "updatetime": "2026/11/09 00:46:11",
         "timefrom": "2026/11/07 00:00",
-        "timeto": "2026/11/09 00:30"
+        "timeto": "2026/11/09 00:40"
       },
       "counties": {
         "基隆市": {
@@ -598,9 +606,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/09 00:36:28",
+        "updatetime": "2026/11/09 00:46:11",
         "timefrom": "2026/11/06 00:00",
-        "timeto": "2026/11/09 00:30"
+        "timeto": "2026/11/09 00:40"
       },
       "counties": {
         "基隆市": {
@@ -790,9 +798,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/09 00:36:28",
+        "updatetime": "2026/11/09 00:49:15",
         "timefrom": "2026/11/05 00:00",
-        "timeto": "2026/11/09 00:30"
+        "timeto": "2026/11/09 00:40"
       },
       "counties": {
         "基隆市": {
