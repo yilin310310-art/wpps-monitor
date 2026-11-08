@@ -1,10 +1,148 @@
 {
-  "fetched_at": "2026-11-09 01:20:23",
+  "fetched_at": "2026-11-09 01:30:37",
   "durations": {
     "最近1小時": {
       "period": {
+        "updatetime": "2026/11/09 01:26:27",
+        "timefrom": "2026/11/09 00:20",
+        "timeto": "2026/11/09 01:20"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": "12.0",
+          "stations": [
+            {
+              "id": "C0AH3",
+              "name": "五分山",
+              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
+            }
+          ]
+        },
+        "臺北市": {
+          "rain": "8.5",
+          "stations": [
+            {
+              "id": "A1AD7",
+              "name": "茶製場",
+              "location": "臺北市南港區舊莊街二段(茶葉製造示範場停車場) - 北市府大地工程處"
+            }
+          ]
+        },
+        "桃園市": {
+          "rain": "2.0",
+          "stations": [
+            {
+              "id": "CAC05",
+              "name": "西濱S017K",
+              "location": "桃園市蘆竹區西濱快道南向17.5K"
+            }
+          ]
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C1V34",
+              "name": "大津",
+              "location": "高雄市六龜區大津里34號(大津登山訓練中心)"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "81R64",
+              "name": "佳義國小",
+              "location": "屏東縣瑪家鄉佳義村 - 農村水保署"
+            },
+            {
+              "id": "C0R64",
+              "name": "東港",
+              "location": "屏東縣東港鎮豐漁里豐漁街67號(水產試驗所東港生技研究中心)"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "C0UA7",
+              "name": "桃源谷",
+              "location": "宜蘭縣頭城鎮及新北市貢寮區交界之桃源谷附近空地"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
         "updatetime": "2026/11/09 01:20:16",
-        "timefrom": "2026/11/09 00:10",
+        "timefrom": "2026/11/09 00:00",
         "timeto": "2026/11/09 01:10"
       },
       "counties": {
@@ -13,7 +151,7 @@
           "stations": []
         },
         "新北市": {
-          "rain": "14.5",
+          "rain": "17.5",
           "stations": [
             {
               "id": "C0AH3",
@@ -139,138 +277,11 @@
         }
       }
     },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/09 01:07:16",
-        "timefrom": "2026/11/09 00:00",
-        "timeto": "2026/11/09 01:00"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": "17.5",
-          "stations": [
-            {
-              "id": "C0AH3",
-              "name": "五分山",
-              "location": "新北市瑞芳區靜安路四段1巷1號(五分山雷達站旁)"
-            }
-          ]
-        },
-        "臺北市": {
-          "rain": "5.5",
-          "stations": [
-            {
-              "id": "A1AD7",
-              "name": "茶製場",
-              "location": "臺北市南港區舊莊街二段(茶葉製造示範場停車場) - 北市府大地工程處"
-            }
-          ]
-        },
-        "桃園市": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "CAC05",
-              "name": "西濱S017K",
-              "location": "桃園市蘆竹區西濱快道南向17.5K"
-            }
-          ]
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "81R64",
-              "name": "佳義國小",
-              "location": "屏東縣瑪家鄉佳義村 - 農村水保署"
-            }
-          ]
-        },
-        "宜蘭縣": {
-          "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0UA7",
-              "name": "桃源谷",
-              "location": "宜蘭縣頭城鎮及新北市貢寮區交界之桃源谷附近空地"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/09 01:17:13",
+        "updatetime": "2026/11/09 01:26:27",
         "timefrom": "2026/11/08 00:00",
-        "timeto": "2026/11/09 01:10"
+        "timeto": "2026/11/09 01:20"
       },
       "counties": {
         "基隆市": {
@@ -294,7 +305,7 @@
           ]
         },
         "臺北市": {
-          "rain": "7.0",
+          "rain": "8.5",
           "stations": [
             {
               "id": "A1AD7",
@@ -431,9 +442,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/09 01:17:13",
+        "updatetime": "2026/11/09 01:26:27",
         "timefrom": "2026/11/07 00:00",
-        "timeto": "2026/11/09 01:10"
+        "timeto": "2026/11/09 01:20"
       },
       "counties": {
         "基隆市": {
@@ -623,9 +634,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/09 01:17:13",
+        "updatetime": "2026/11/09 01:26:27",
         "timefrom": "2026/11/06 00:00",
-        "timeto": "2026/11/09 01:10"
+        "timeto": "2026/11/09 01:20"
       },
       "counties": {
         "基隆市": {
@@ -815,9 +826,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/09 01:17:13",
+        "updatetime": "2026/11/09 01:26:27",
         "timefrom": "2026/11/05 00:00",
-        "timeto": "2026/11/09 01:10"
+        "timeto": "2026/11/09 01:20"
       },
       "counties": {
         "基隆市": {
