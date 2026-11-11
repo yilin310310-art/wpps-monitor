@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-11-11 10:00:45",
+  "fetched_at": "2026-11-11 10:10:25",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/11 09:57:11",
-        "timefrom": "2026/11/11 08:50",
-        "timeto": "2026/11/11 09:50"
+        "updatetime": "2026/11/11 10:08:36",
+        "timefrom": "2026/11/11 09:00",
+        "timeto": "2026/11/11 10:00"
       },
       "counties": {
         "基隆市": {
@@ -63,28 +63,16 @@
           "stations": []
         },
         "嘉義縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "81M80",
-              "name": "來吉國小",
-              "location": "嘉義縣阿里山鄉來吉村四鄰91號 - 農村水保署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
           "rain": null,
           "stations": []
         },
         "高雄市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C1V16",
-              "name": "達卡努瓦",
-              "location": "高雄市那瑪夏區達卡努瓦里"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "屏東縣": {
           "rain": null,
