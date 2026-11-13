@@ -1,20 +1,153 @@
 {
-  "fetched_at": "2026-11-14 00:30:42",
+  "fetched_at": "2026-11-14 01:10:26",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/14 00:26:50",
+        "updatetime": "2026/11/14 00:59:10",
         "timefrom": "2026/11/13 23:20",
         "timeto": "2026/11/14 00:20"
       },
       "counties": {
         "基隆市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46695",
+              "name": "彭佳嶼",
+              "location": "基隆市中正區彭佳嶼路2號"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0AH9",
+              "name": "福山植物園",
+              "location": "新北市烏來區福山植物園(生活植物區之民俗植物區觀測坪)"
+            }
+          ]
+        },
+        "臺北市": {
           "rain": null,
           "stations": []
         },
-        "新北市": {
+        "桃園市": {
           "rain": null,
           "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": "3.0",
+          "stations": [
+            {
+              "id": "C2R9A",
+              "name": "高士國小",
+              "location": "屏東縣牡丹鄉高士路29號"
+            }
+          ]
+        },
+        "宜蘭縣": {
+          "rain": null,
+          "stations": []
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": "2.0",
+          "stations": [
+            {
+              "id": "C0S91",
+              "name": "蘭嶼燈塔",
+              "location": "臺東縣蘭嶼鄉椰油段1-7地號(蘭嶼燈塔旁)"
+            }
+          ]
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/14 00:59:10",
+        "timefrom": "2026/11/14 00:00",
+        "timeto": "2026/11/14 00:20"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "46695",
+              "name": "彭佳嶼",
+              "location": "基隆市中正區彭佳嶼路2號"
+            }
+          ]
+        },
+        "新北市": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0AH9",
+              "name": "福山植物園",
+              "location": "新北市烏來區福山植物園(生活植物區之民俗植物區觀測坪)"
+            }
+          ]
         },
         "臺北市": {
           "rain": null,
@@ -70,126 +203,6 @@
         },
         "屏東縣": {
           "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0R76",
-              "name": "南仁湖",
-              "location": "屏東縣滿州鄉南仁湖步道4K處山頂觀測站旁"
-            },
-            {
-              "id": "C2R9A",
-              "name": "高士國小",
-              "location": "屏東縣牡丹鄉高士路29號"
-            }
-          ]
-        },
-        "宜蘭縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01U78",
-              "name": "四季",
-              "location": "宜蘭縣大同鄉四季村和勳巷1號(四季國小) - 第1河川分署"
-            }
-          ]
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0S91",
-              "name": "蘭嶼燈塔",
-              "location": "臺東縣蘭嶼鄉椰油段1-7地號(蘭嶼燈塔旁)"
-            }
-          ]
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/14 00:26:50",
-        "timefrom": "2026/11/14 00:00",
-        "timeto": "2026/11/14 00:20"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": null,
-          "stations": []
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": "2.0",
           "stations": [
             {
               "id": "C2R9A",
@@ -232,13 +245,13 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/14 00:26:50",
+        "updatetime": "2026/11/14 00:59:10",
         "timefrom": "2026/11/13 00:00",
         "timeto": "2026/11/14 00:20"
       },
       "counties": {
         "基隆市": {
-          "rain": "2.5",
+          "rain": "3.0",
           "stations": [
             {
               "id": "46695",
@@ -328,7 +341,7 @@
           ]
         },
         "屏東縣": {
-          "rain": "4.5",
+          "rain": "5.0",
           "stations": [
             {
               "id": "C2R9A",
@@ -394,13 +407,13 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/14 00:26:50",
+        "updatetime": "2026/11/14 00:59:10",
         "timefrom": "2026/11/12 00:00",
         "timeto": "2026/11/14 00:20"
       },
       "counties": {
         "基隆市": {
-          "rain": "3.5",
+          "rain": "4.0",
           "stations": [
             {
               "id": "46695",
@@ -575,7 +588,7 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/14 00:26:50",
+        "updatetime": "2026/11/14 00:59:10",
         "timefrom": "2026/11/11 00:00",
         "timeto": "2026/11/14 00:20"
       },
@@ -788,9 +801,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/14 00:26:50",
+        "updatetime": "2026/11/14 01:08:56",
         "timefrom": "2026/11/10 00:00",
-        "timeto": "2026/11/14 00:20"
+        "timeto": "2026/11/14 01:00"
       },
       "counties": {
         "基隆市": {
@@ -937,7 +950,7 @@
           ]
         },
         "屏東縣": {
-          "rain": "20.5",
+          "rain": "21.0",
           "stations": [
             {
               "id": "C2R9A",
