@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-11-18 00:10:27",
+  "fetched_at": "2026-11-18 00:20:30",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:18:12",
         "timefrom": "2026/11/17 23:00",
         "timeto": "2026/11/18 00:00"
       },
@@ -112,58 +112,34 @@
     },
     "本日累積": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:17:13",
         "timefrom": "2026/11/18 00:00",
         "timeto": "2026/11/18 00:00"
       },
       "counties": {
         "基隆市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01B03",
-              "name": "五堵",
-              "location": "基隆市七堵區堵北里 - 第10河川分署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "新北市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "L1A80",
-              "name": "翡翠水庫碧湖",
-              "location": "新北市坪林區石曹里 - 翡翠水庫"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺北市": {
           "rain": null,
           "stations": []
         },
         "桃園市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "CAC77",
-              "name": "國三N072K",
-              "location": "桃園市龍潭區國道3號北向72.5K"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "新竹市": {
           "rain": null,
           "stations": []
         },
         "新竹縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "CAD08",
-              "name": "國三N085K",
-              "location": "新竹縣關西鎮國道3號北向85.63K"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "苗栗縣": {
           "rain": null,
@@ -178,29 +154,8 @@
           "stations": []
         },
         "南投縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0H9C",
-              "name": "合歡山頂",
-              "location": "南投縣仁愛鄉(大甲溪事業區81林班、合歡山三角點附近)"
-            },
-            {
-              "id": "C0I48",
-              "name": "梅峰",
-              "location": "南投縣仁愛鄉大同村仁和路215號(梅峰農場)"
-            },
-            {
-              "id": "C0I54",
-              "name": "奇萊稜線",
-              "location": "南投縣仁愛鄉奇萊稜線指標6.4K處(奇萊山屋附近)"
-            },
-            {
-              "id": "C1I50",
-              "name": "大尖山",
-              "location": "南投縣仁愛鄉大尖山"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "雲林縣": {
           "rain": null,
@@ -211,67 +166,32 @@
           "stations": []
         },
         "嘉義縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "81M79",
-              "name": "麻竹湖步道",
-              "location": "嘉義縣番路鄉公興村龍美（麻竹湖步道入口旁） - 農村水保署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
           "rain": null,
           "stations": []
         },
         "高雄市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C1V83",
-              "name": "國三S383K",
-              "location": "高雄市燕巢區國道3號北向383K"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "屏東縣": {
           "rain": null,
           "stations": []
         },
         "宜蘭縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0UA4",
-              "name": "西德山",
-              "location": "宜蘭縣南澳鄉安平坑林道(力霸產業道路)附近山區(南澳事業區28林班)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "花蓮縣": {
-          "rain": "27.0",
-          "stations": [
-            {
-              "id": "C0T9I",
-              "name": "豐濱",
-              "location": "花蓮縣豐濱鄉豐濱村"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺東縣": {
-          "rain": "5.0",
-          "stations": [
-            {
-              "id": "C0S70",
-              "name": "知本",
-              "location": "臺東縣卑南鄉溫泉村(溫泉國小樂山分校)"
-            },
-            {
-              "id": "C0S73",
-              "name": "綠島",
-              "location": "臺東縣綠島鄉"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "澎湖縣": {
           "rain": null,
@@ -289,7 +209,7 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:17:13",
         "timefrom": "2026/11/17 00:00",
         "timeto": "2026/11/18 00:00"
       },
@@ -466,7 +386,7 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:17:13",
         "timefrom": "2026/11/16 00:00",
         "timeto": "2026/11/18 00:00"
       },
@@ -712,7 +632,7 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:17:13",
         "timefrom": "2026/11/15 00:00",
         "timeto": "2026/11/18 00:00"
       },
@@ -991,7 +911,7 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/18 00:06:54",
+        "updatetime": "2026/11/18 00:17:13",
         "timefrom": "2026/11/14 00:00",
         "timeto": "2026/11/18 00:00"
       },
