@@ -46,5 +46,9 @@ jobs:
             echo "沒有變化，不需要commit"
           else
             git commit -m "自動更新雨量預報資料 $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              echo "推送衝突，重試第 $i 次..."
+              sleep 5
+            done
           fi
