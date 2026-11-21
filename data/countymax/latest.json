@@ -1,11 +1,125 @@
 {
-  "fetched_at": "2026-11-22 00:30:41",
+  "fetched_at": "2026-11-22 00:40:31",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/22 00:26:13",
-        "timefrom": "2026/11/21 23:10",
-        "timeto": "2026/11/22 00:10"
+        "updatetime": "2026/11/22 00:37:11",
+        "timefrom": "2026/11/21 23:30",
+        "timeto": "2026/11/22 00:30"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": null,
+          "stations": []
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": null,
+          "stations": []
+        },
+        "苗栗縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺中市": {
+          "rain": null,
+          "stations": []
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": null,
+          "stations": []
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": null,
+          "stations": []
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0U96",
+              "name": "翠峰湖",
+              "location": "宜蘭縣大同鄉(太平山翠峰湖停車場木棧道旁)"
+            }
+          ]
+        },
+        "花蓮縣": {
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C1T95",
+              "name": "太安",
+              "location": "花蓮縣萬榮鄉(太田事業區128林班、馬太鞍苗圃)"
+            },
+            {
+              "id": "C2TA7",
+              "name": "赤科坪",
+              "location": "花蓮縣玉里鎮觀音里高寮284號"
+            }
+          ]
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": null,
+          "stations": []
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/22 00:30:30",
+        "timefrom": "2026/11/22 00:00",
+        "timeto": "2026/11/22 00:20"
       },
       "counties": {
         "基隆市": {
@@ -80,14 +194,9 @@
           "rain": "0.5",
           "stations": [
             {
-              "id": "C1T95",
-              "name": "太安",
-              "location": "花蓮縣萬榮鄉(太田事業區128林班、馬太鞍苗圃)"
-            },
-            {
-              "id": "C1Z24",
-              "name": "中平林道",
-              "location": "花蓮縣卓溪鄉中平林道(玉里林道)約15K鐵牌處步行上山高地"
+              "id": "C2TA7",
+              "name": "赤科坪",
+              "location": "花蓮縣玉里鎮觀音里高寮284號"
             }
           ]
         },
@@ -109,108 +218,11 @@
         }
       }
     },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/22 00:26:13",
-        "timefrom": "2026/11/22 00:00",
-        "timeto": "2026/11/22 00:10"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": null,
-          "stations": []
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": null,
-          "stations": []
-        },
-        "苗栗縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺中市": {
-          "rain": null,
-          "stations": []
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": null,
-          "stations": []
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": null,
-          "stations": []
-        },
-        "屏東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "宜蘭縣": {
-          "rain": null,
-          "stations": []
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": null,
-          "stations": []
-        }
-      }
-    },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:30:30",
+        "updatetime": "2026/11/22 00:37:11",
         "timefrom": "2026/11/21 00:00",
-        "timeto": "2026/11/22 00:20"
+        "timeto": "2026/11/22 00:30"
       },
       "counties": {
         "基隆市": {
@@ -414,9 +426,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:20:19",
+        "updatetime": "2026/11/22 00:30:30",
         "timefrom": "2026/11/20 00:00",
-        "timeto": "2026/11/22 00:10"
+        "timeto": "2026/11/22 00:20"
       },
       "counties": {
         "基隆市": {
@@ -605,9 +617,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:30:30",
+        "updatetime": "2026/11/22 00:39:12",
         "timefrom": "2026/11/19 00:00",
-        "timeto": "2026/11/22 00:20"
+        "timeto": "2026/11/22 00:30"
       },
       "counties": {
         "基隆市": {
@@ -803,9 +815,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:20:19",
+        "updatetime": "2026/11/22 00:37:11",
         "timefrom": "2026/11/18 00:00",
-        "timeto": "2026/11/22 00:10"
+        "timeto": "2026/11/22 00:30"
       },
       "counties": {
         "基隆市": {
