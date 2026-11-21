@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-11-22 00:20:35",
+  "fetched_at": "2026-11-22 00:30:41",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/22 00:20:19",
+        "updatetime": "2026/11/22 00:26:13",
         "timefrom": "2026/11/21 23:10",
         "timeto": "2026/11/22 00:10"
       },
@@ -92,14 +92,8 @@
           ]
         },
         "臺東縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01S86",
-              "name": "電光",
-              "location": "臺東縣關山鎮電光里中興路93號(電光國小) - 第8河川分署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "澎湖縣": {
           "rain": null,
@@ -117,9 +111,9 @@
     },
     "本日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:06:49",
+        "updatetime": "2026/11/22 00:26:13",
         "timefrom": "2026/11/22 00:00",
-        "timeto": "2026/11/22 00:00"
+        "timeto": "2026/11/22 00:10"
       },
       "counties": {
         "基隆市": {
@@ -127,185 +121,76 @@
           "stations": []
         },
         "新北市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C2AK3",
-              "name": "信賢",
-              "location": "新北市烏來區信賢里"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺北市": {
           "rain": null,
           "stations": []
         },
         "桃園市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "21C09",
-              "name": "嘎拉賀",
-              "location": "桃園市復興區華峻里 - 石門水庫"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "新竹市": {
           "rain": null,
           "stations": []
         },
         "新竹縣": {
-          "rain": "3.5",
-          "stations": [
-            {
-              "id": "C0D75",
-              "name": "樂山林道6k",
-              "location": "新竹縣五峰鄉檜山段33地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "苗栗縣": {
-          "rain": "3.0",
-          "stations": [
-            {
-              "id": "C0E96",
-              "name": "觀霧分站",
-              "location": "苗栗縣泰安鄉觀霧段55-1地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺中市": {
-          "rain": "4.5",
-          "stations": [
-            {
-              "id": "C0FA9",
-              "name": "小雪山林道",
-              "location": "臺中市和平區小雪山段51地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "彰化縣": {
           "rain": null,
           "stations": []
         },
         "南投縣": {
-          "rain": "15.5",
-          "stations": [
-            {
-              "id": "C1I32",
-              "name": "奧萬大",
-              "location": "南投縣仁愛鄉(奧萬大森林遊樂區員工宿舍)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "雲林縣": {
-          "rain": "6.0",
-          "stations": [
-            {
-              "id": "C2K61",
-              "name": "草嶺石壁",
-              "location": "雲林縣古坑鄉草嶺村石壁70號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "嘉義市": {
           "rain": null,
           "stations": []
         },
         "嘉義縣": {
-          "rain": "7.5",
-          "stations": [
-            {
-              "id": "C2M81",
-              "name": "里佳",
-              "location": "嘉義縣阿里山鄉里佳村"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
-          "rain": "6.0",
-          "stations": [
-            {
-              "id": "C1O87",
-              "name": "大棟山",
-              "location": "臺南市白河區(大棟山三角點)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "高雄市": {
-          "rain": "15.0",
-          "stations": [
-            {
-              "id": "01V07",
-              "name": "天池",
-              "location": "高雄市桃源區梅山里(天池工作站) - 第7河川分署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "屏東縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0R13",
-              "name": "阿禮",
-              "location": "屏東縣霧臺鄉(屏東事業區46林班、離山地文化村方向、轉播站前)"
-            },
-            {
-              "id": "C0R44",
-              "name": "大漢山",
-              "location": "屏東縣春日鄉(大漢山頂)"
-            },
-            {
-              "id": "O1S69",
-              "name": "神山",
-              "location": "屏東縣霧臺鄉霧臺村神山巷73號 - 第7河川分署"
-            },
-            {
-              "id": "C2R99",
-              "name": "泰武",
-              "location": "屏東縣泰武鄉泰武村"
-            },
-            {
-              "id": "C0R12",
-              "name": "上德文",
-              "location": "屏東縣三地門鄉德文段870地號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "宜蘭縣": {
-          "rain": "2.5",
-          "stations": [
-            {
-              "id": "C0UA3",
-              "name": "白嶺",
-              "location": "宜蘭縣大同鄉(太平山白嶺苗圃)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "花蓮縣": {
-          "rain": "15.5",
-          "stations": [
-            {
-              "id": "A0Z08",
-              "name": "合歡山",
-              "location": "花蓮縣秀林鄉與南投縣仁愛鄉交界台14甲線33K處(合歡山遊客中心)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺東縣": {
-          "rain": "12.0",
-          "stations": [
-            {
-              "id": "01S47",
-              "name": "向陽(2)",
-              "location": "臺東縣海端鄉向陽村(向陽遊樂區行政中心旁) - 第8河川分署"
-            },
-            {
-              "id": "C0S75",
-              "name": "向陽",
-              "location": "臺東縣海端鄉向陽工務段"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "澎湖縣": {
           "rain": null,
@@ -323,9 +208,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:06:49",
+        "updatetime": "2026/11/22 00:30:30",
         "timefrom": "2026/11/21 00:00",
-        "timeto": "2026/11/22 00:00"
+        "timeto": "2026/11/22 00:20"
       },
       "counties": {
         "基隆市": {
@@ -529,9 +414,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:06:49",
+        "updatetime": "2026/11/22 00:20:19",
         "timefrom": "2026/11/20 00:00",
-        "timeto": "2026/11/22 00:00"
+        "timeto": "2026/11/22 00:10"
       },
       "counties": {
         "基隆市": {
@@ -720,9 +605,9 @@
     },
     "4日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:06:49",
+        "updatetime": "2026/11/22 00:30:30",
         "timefrom": "2026/11/19 00:00",
-        "timeto": "2026/11/22 00:00"
+        "timeto": "2026/11/22 00:20"
       },
       "counties": {
         "基隆市": {
@@ -918,9 +803,9 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/22 00:06:49",
+        "updatetime": "2026/11/22 00:20:19",
         "timefrom": "2026/11/18 00:00",
-        "timeto": "2026/11/22 00:00"
+        "timeto": "2026/11/22 00:10"
       },
       "counties": {
         "基隆市": {
