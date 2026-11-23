@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-11-24 00:10:32",
+  "fetched_at": "2026-11-24 00:20:33",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/24 00:07:14",
+        "updatetime": "2026/11/24 00:18:12",
         "timefrom": "2026/11/23 23:00",
         "timeto": "2026/11/24 00:00"
       },
@@ -111,17 +111,12 @@
           "stations": []
         },
         "高雄市": {
-          "rain": "0.5",
+          "rain": "1.0",
           "stations": [
             {
-              "id": "C1V17",
-              "name": "排雲",
-              "location": "高雄市桃源區(排雲山莊往南峰方向1.5K)"
-            },
-            {
-              "id": "C1V19",
-              "name": "南天池",
-              "location": "高雄市桃源區(長青祠旁之步道步行約50分鐘)"
+              "id": "01V07",
+              "name": "天池",
+              "location": "高雄市桃源區梅山里(天池工作站) - 第7河川分署"
             }
           ]
         },
@@ -163,7 +158,7 @@
     },
     "本日累積": {
       "period": {
-        "updatetime": "2026/11/24 00:07:14",
+        "updatetime": "2026/11/24 00:18:12",
         "timefrom": "2026/11/24 00:00",
         "timeto": "2026/11/24 00:00"
       },
@@ -189,7 +184,7 @@
           "stations": []
         },
         "新竹縣": {
-          "rain": "1.0",
+          "rain": "0.5",
           "stations": [
             {
               "id": "C0D55",
@@ -199,7 +194,7 @@
           ]
         },
         "苗栗縣": {
-          "rain": "2.0",
+          "rain": "1.0",
           "stations": [
             {
               "id": "C0E96",
@@ -209,127 +204,58 @@
           ]
         },
         "臺中市": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "A0F01",
-              "name": "武陵",
-              "location": "臺中市和平區平等村武陵路3之16號(富野度假村樓頂平台)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "彰化縣": {
           "rain": null,
           "stations": []
         },
         "南投縣": {
-          "rain": "3.0",
+          "rain": "1.0",
           "stations": [
             {
-              "id": "C1I29",
-              "name": "豐丘",
-              "location": "南投縣信義鄉豐丘村豐丘產業道路底"
+              "id": "C1I25",
+              "name": "鯉潭",
+              "location": "南投縣埔里鎮中心路2K(埔里高工旁)"
             }
           ]
         },
         "雲林縣": {
-          "rain": "3.5",
-          "stations": [
-            {
-              "id": "C2K61",
-              "name": "草嶺石壁",
-              "location": "雲林縣古坑鄉草嶺村石壁70號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "嘉義市": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0M73",
-              "name": "嘉義市東區",
-              "location": "嘉義市東區親水路123號(第5河川局水情中心)"
-            },
-            {
-              "id": "G2L02",
-              "name": "農試嘉義分所",
-              "location": "嘉義市東區民權路2號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "嘉義縣": {
-          "rain": "3.0",
-          "stations": [
-            {
-              "id": "O1M65",
-              "name": "外來吉",
-              "location": "嘉義縣阿里山鄉來吉村 - 第4河川分署"
-            },
-            {
-              "id": "81M80",
-              "name": "來吉國小",
-              "location": "嘉義縣阿里山鄉來吉村四鄰91號 - 農村水保署"
-            },
-            {
-              "id": "C2M96",
-              "name": "外寮",
-              "location": "嘉義縣梅山鄉瑞峰村"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "88O95",
-              "name": "羌黃坑",
-              "location": "臺南市南化區玉山里 - 農村水保署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "高雄市": {
-          "rain": "4.5",
-          "stations": [
-            {
-              "id": "C1V19",
-              "name": "南天池",
-              "location": "高雄市桃源區(長青祠旁之步道步行約50分鐘)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "屏東縣": {
           "rain": null,
           "stations": []
         },
         "宜蘭縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0UA2",
-              "name": "多加屯",
-              "location": "宜蘭縣大同鄉多加屯山指標8.4K處(多加屯避難山屋附近)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "花蓮縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0T9E",
-              "name": "大坑",
-              "location": "花蓮縣壽豐鄉10鄰山嶺80-1號(中華電信賀田山機房旁)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺東縣": {
-          "rain": "5.0",
-          "stations": [
-            {
-              "id": "C0S83",
-              "name": "長濱",
-              "location": "臺東縣長濱鄉竹湖村(移民橋後山三角點)"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "澎湖縣": {
           "rain": null,
@@ -340,14 +266,8 @@
           "stations": []
         },
         "連江縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "46799",
-              "name": "馬祖",
-              "location": "連江縣南竿鄉四維村6鄰88號"
-            }
-          ]
+          "rain": null,
+          "stations": []
         }
       }
     },
@@ -987,7 +907,7 @@
     },
     "5日累積": {
       "period": {
-        "updatetime": "2026/11/24 00:07:14",
+        "updatetime": "2026/11/24 00:18:12",
         "timefrom": "2026/11/20 00:00",
         "timeto": "2026/11/24 00:00"
       },
