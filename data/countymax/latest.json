@@ -1,150 +1,11 @@
 {
-  "fetched_at": "2026-11-24 01:10:40",
+  "fetched_at": "2026-11-24 01:20:32",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/24 00:56:47",
-        "timefrom": "2026/11/23 23:50",
-        "timeto": "2026/11/24 00:50"
-      },
-      "counties": {
-        "基隆市": {
-          "rain": null,
-          "stations": []
-        },
-        "新北市": {
-          "rain": null,
-          "stations": []
-        },
-        "臺北市": {
-          "rain": null,
-          "stations": []
-        },
-        "桃園市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹市": {
-          "rain": null,
-          "stations": []
-        },
-        "新竹縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "C0D55",
-              "name": "雪霸",
-              "location": "新竹縣五峰鄉桃山村民石380號(雪霸農場)"
-            }
-          ]
-        },
-        "苗栗縣": {
-          "rain": "2.0",
-          "stations": [
-            {
-              "id": "C0E96",
-              "name": "觀霧分站",
-              "location": "苗栗縣泰安鄉觀霧段55-1地號"
-            }
-          ]
-        },
-        "臺中市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01F35",
-              "name": "水利署雪嶺",
-              "location": "臺中市和平區(小雪山山莊) - 第3河川分署"
-            }
-          ]
-        },
-        "彰化縣": {
-          "rain": null,
-          "stations": []
-        },
-        "南投縣": {
-          "rain": "3.0",
-          "stations": [
-            {
-              "id": "C1I02",
-              "name": "萬大",
-              "location": "南投縣仁愛鄉親愛村萬大水庫宿舍旁"
-            }
-          ]
-        },
-        "雲林縣": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義市": {
-          "rain": null,
-          "stations": []
-        },
-        "嘉義縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺南市": {
-          "rain": null,
-          "stations": []
-        },
-        "高雄市": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "01V07",
-              "name": "天池",
-              "location": "高雄市桃源區梅山里(天池工作站) - 第7河川分署"
-            }
-          ]
-        },
-        "屏東縣": {
-          "rain": null,
-          "stations": []
-        },
-        "宜蘭縣": {
-          "rain": null,
-          "stations": []
-        },
-        "花蓮縣": {
-          "rain": null,
-          "stations": []
-        },
-        "臺東縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C0S75",
-              "name": "向陽",
-              "location": "臺東縣海端鄉向陽工務段"
-            }
-          ]
-        },
-        "澎湖縣": {
-          "rain": null,
-          "stations": []
-        },
-        "金門縣": {
-          "rain": null,
-          "stations": []
-        },
-        "連江縣": {
-          "rain": "1.5",
-          "stations": [
-            {
-              "id": "CAW01",
-              "name": "東引",
-              "location": "連江縣東引鄉(東引機場候機室旁)"
-            }
-          ]
-        }
-      }
-    },
-    "本日累積": {
-      "period": {
-        "updatetime": "2026/11/24 00:56:47",
+        "updatetime": "2026/11/24 01:18:12",
         "timefrom": "2026/11/24 00:00",
-        "timeto": "2026/11/24 00:50"
+        "timeto": "2026/11/24 01:00"
       },
       "counties": {
         "基隆市": {
@@ -208,6 +69,11 @@
               "id": "C1I02",
               "name": "萬大",
               "location": "南投縣仁愛鄉親愛村萬大水庫宿舍旁"
+            },
+            {
+              "id": "C1I50",
+              "name": "大尖山",
+              "location": "南投縣仁愛鄉大尖山"
             }
           ]
         },
@@ -228,13 +94,8 @@
           "stations": []
         },
         "高雄市": {
-          "rain": "0.5",
+          "rain": "1.0",
           "stations": [
-            {
-              "id": "81V94",
-              "name": "寶山部落",
-              "location": "高雄市桃源區寶山里寶山16號 - 農村水保署"
-            },
             {
               "id": "C0V93",
               "name": "天池",
@@ -267,7 +128,145 @@
           "stations": []
         },
         "連江縣": {
+          "rain": "2.5",
+          "stations": [
+            {
+              "id": "CAW01",
+              "name": "東引",
+              "location": "連江縣東引鄉(東引機場候機室旁)"
+            }
+          ]
+        }
+      }
+    },
+    "本日累積": {
+      "period": {
+        "updatetime": "2026/11/24 01:08:55",
+        "timefrom": "2026/11/24 00:00",
+        "timeto": "2026/11/24 01:00"
+      },
+      "counties": {
+        "基隆市": {
+          "rain": null,
+          "stations": []
+        },
+        "新北市": {
+          "rain": null,
+          "stations": []
+        },
+        "臺北市": {
+          "rain": null,
+          "stations": []
+        },
+        "桃園市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹市": {
+          "rain": null,
+          "stations": []
+        },
+        "新竹縣": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "C0D55",
+              "name": "雪霸",
+              "location": "新竹縣五峰鄉桃山村民石380號(雪霸農場)"
+            }
+          ]
+        },
+        "苗栗縣": {
           "rain": "1.5",
+          "stations": [
+            {
+              "id": "C0E96",
+              "name": "觀霧分站",
+              "location": "苗栗縣泰安鄉觀霧段55-1地號"
+            }
+          ]
+        },
+        "臺中市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "01F35",
+              "name": "水利署雪嶺",
+              "location": "臺中市和平區(小雪山山莊) - 第3河川分署"
+            }
+          ]
+        },
+        "彰化縣": {
+          "rain": null,
+          "stations": []
+        },
+        "南投縣": {
+          "rain": "3.0",
+          "stations": [
+            {
+              "id": "C1I02",
+              "name": "萬大",
+              "location": "南投縣仁愛鄉親愛村萬大水庫宿舍旁"
+            },
+            {
+              "id": "C1I50",
+              "name": "大尖山",
+              "location": "南投縣仁愛鄉大尖山"
+            }
+          ]
+        },
+        "雲林縣": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義市": {
+          "rain": null,
+          "stations": []
+        },
+        "嘉義縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺南市": {
+          "rain": null,
+          "stations": []
+        },
+        "高雄市": {
+          "rain": "1.0",
+          "stations": [
+            {
+              "id": "C0V93",
+              "name": "天池",
+              "location": "高雄市桃源區天池段41地號"
+            }
+          ]
+        },
+        "屏東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "宜蘭縣": {
+          "rain": null,
+          "stations": []
+        },
+        "花蓮縣": {
+          "rain": null,
+          "stations": []
+        },
+        "臺東縣": {
+          "rain": null,
+          "stations": []
+        },
+        "澎湖縣": {
+          "rain": null,
+          "stations": []
+        },
+        "金門縣": {
+          "rain": null,
+          "stations": []
+        },
+        "連江縣": {
+          "rain": "2.5",
           "stations": [
             {
               "id": "CAW01",
@@ -280,9 +279,9 @@
     },
     "2日累積": {
       "period": {
-        "updatetime": "2026/11/24 00:56:47",
+        "updatetime": "2026/11/24 01:08:55",
         "timefrom": "2026/11/23 00:00",
-        "timeto": "2026/11/24 00:50"
+        "timeto": "2026/11/24 01:00"
       },
       "counties": {
         "基隆市": {
@@ -345,42 +344,12 @@
           "stations": []
         },
         "南投縣": {
-          "rain": "3.0",
+          "rain": "4.0",
           "stations": [
             {
-              "id": "01H47",
-              "name": "西巒",
-              "location": "南投縣信義鄉(人倫17林班苗圃) - 第4河川分署"
-            },
-            {
-              "id": "46755",
-              "name": "玉山",
-              "location": "南投縣信義鄉玉山北峰1號"
-            },
-            {
-              "id": "C1I02",
-              "name": "萬大",
-              "location": "南投縣仁愛鄉親愛村萬大水庫宿舍旁"
-            },
-            {
-              "id": "C1I29",
-              "name": "豐丘",
-              "location": "南投縣信義鄉豐丘村豐丘產業道路底"
-            },
-            {
-              "id": "C1I32",
-              "name": "奧萬大",
-              "location": "南投縣仁愛鄉(奧萬大森林遊樂區員工宿舍)"
-            },
-            {
-              "id": "C1I47",
-              "name": "杉林溪",
-              "location": "南投縣竹山鎮大鞍里(杉林溪森林生態渡假園區收費亭附近)"
-            },
-            {
-              "id": "C0HA1",
-              "name": "奧萬大",
-              "location": "南投縣仁愛鄉奧萬大段27地號"
+              "id": "C1I50",
+              "name": "大尖山",
+              "location": "南投縣仁愛鄉大尖山"
             }
           ]
         },
@@ -492,7 +461,7 @@
           "stations": []
         },
         "連江縣": {
-          "rain": "1.5",
+          "rain": "2.5",
           "stations": [
             {
               "id": "CAW01",
