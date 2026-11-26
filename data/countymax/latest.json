@@ -1,11 +1,11 @@
 {
-  "fetched_at": "2026-11-27 05:00:50",
+  "fetched_at": "2026-11-27 05:10:28",
   "durations": {
     "最近1小時": {
       "period": {
-        "updatetime": "2026/11/27 04:56:48",
-        "timefrom": "2026/11/27 03:50",
-        "timeto": "2026/11/27 04:50"
+        "updatetime": "2026/11/27 05:08:53",
+        "timefrom": "2026/11/27 04:00",
+        "timeto": "2026/11/27 05:00"
       },
       "counties": {
         "基隆市": {
@@ -37,8 +37,14 @@
           "stations": []
         },
         "臺中市": {
-          "rain": null,
-          "stations": []
+          "rain": "0.5",
+          "stations": [
+            {
+              "id": "C0FA9",
+              "name": "小雪山林道",
+              "location": "臺中市和平區小雪山段51地號"
+            }
+          ]
         },
         "彰化縣": {
           "rain": null,
@@ -83,14 +89,8 @@
           "stations": []
         },
         "嘉義縣": {
-          "rain": "1.0",
-          "stations": [
-            {
-              "id": "81M68",
-              "name": "太和村",
-              "location": "嘉義縣梅山鄉太和村 - 農村水保署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺南市": {
           "rain": null,
@@ -101,28 +101,16 @@
           "stations": []
         },
         "屏東縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "C1R61",
-              "name": "西大武山",
-              "location": "屏東縣泰武鄉北大武山步道2.6K"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "宜蘭縣": {
           "rain": null,
           "stations": []
         },
         "花蓮縣": {
-          "rain": "0.5",
-          "stations": [
-            {
-              "id": "81T91",
-              "name": "東里國中",
-              "location": "花蓮縣富里鄉道化路82號 - 農村水保署"
-            }
-          ]
+          "rain": null,
+          "stations": []
         },
         "臺東縣": {
           "rain": null,
@@ -585,9 +573,9 @@
     },
     "3日累積": {
       "period": {
-        "updatetime": "2026/11/27 04:56:48",
+        "updatetime": "2026/11/27 05:08:53",
         "timefrom": "2026/11/25 00:00",
-        "timeto": "2026/11/27 04:50"
+        "timeto": "2026/11/27 05:00"
       },
       "counties": {
         "基隆市": {
